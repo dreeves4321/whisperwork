@@ -1,0 +1,28 @@
+{
+  "short_name": "Daniel Reeves",
+  "name": "Daniel Reeves - Designer + Builder + Scientist",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0A192F",
+  "background_color": "#F5F5F5",
+  "description": "Portfolio of Daniel Reeves, showcasing work in interactive experiences, program design, and health technology.",
+  "orientation": "any",
+  "categories": ["portfolio", "design", "technology"]
+}

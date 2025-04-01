@@ -1,0 +1,18 @@
+[
+  {
+    "id": "build-a-lamp",
+    "title": "Build-a-Lamp",
+    "description": "An interactive installation allowing museum visitors to design and illuminate their own Tiffany lamp creation.",
+    "type": "gallery",
+    "threads": [
+      "interactive-experiences"
+    ],
+    "thumbnail": "build-a-lamp-1.jpg",
+    "date": "2022",
+    "images": [
+      "build-a-lamp-2.jpg",
+      "build-a-lamp-3.jpg"
+    ],
+    "caption": "The New-York Historical Society's Tiffany Gallery showcases the society's exceptional collection of decorative glass lamps designed and crafted by the Tiffany Studios. Design-A-Lamp offers museum guests the magical opportunity to design and illuminate their own creation in the company of masterpieces."
+  }
+]

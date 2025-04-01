@@ -1,0 +1,32 @@
+[
+  {
+    "id": "program-design",
+    "name": "Program Design",
+    "description": "Transforming large programs require relationships with and deep understanding of the different stakeholders, systems, and problems sets. I embed myself in the teams, work on their problems with them, learn and deliver.",
+    "featured": "aou"
+  },
+  {
+    "id": "interactive-experiences",
+    "name": "Interactive Experiences",
+    "description": "Something about the beauty and challenges of designing immersive interactive experiences. And the breadth of my experience.",
+    "featured": "build-a-lamp"
+  },
+  {
+    "id": "complex-systems",
+    "name": "Complex Systems",
+    "description": "Breaking down and visualizing complex systems to make them understandable and manageable.",
+    "featured": "aou"
+  },
+  {
+    "id": "health-it",
+    "name": "Health IT",
+    "description": "Developing healthcare technology solutions that improve patient outcomes and provider efficiency.",
+    "featured": "aou"
+  },
+  {
+    "id": "ai-health",
+    "name": "AI in Health",
+    "description": "Leveraging artificial intelligence to enhance healthcare delivery and decision-making processes.",
+    "featured": "aou"
+  }
+]

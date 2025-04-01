@@ -1,0 +1,36 @@
+[
+  {
+    "id": "healthcare-stories",
+    "title": "Showing and telling national healthcare stories",
+    "description": "An interactive healthcare story engine that helps scientists showcase their work in context of national problem sets and information.",
+    "type": "case-study",
+    "threads": [
+      "health-it",
+      "interactive-experiences"
+    ],
+    "thumbnail": "healthcare-stories-1.jpg",
+    "date": "2023"
+  },
+  {
+    "id": "build-a-lamp",
+    "title": "Build-a-Lamp",
+    "description": "An interactive installation allowing museum visitors to design and illuminate their own Tiffany lamp creation.",
+    "type": "gallery",
+    "threads": [
+      "interactive-experiences"
+    ],
+    "thumbnail": "build-a-lamp-1.jpg",
+    "date": "2022"
+  },
+  {
+    "id": "aou",
+    "title": "All of Us Research Program",
+    "description": "Designing for participant experience.",
+    "type": "case-study",
+    "threads": [
+      "program-design"
+    ],
+    "thumbnail": "aou-1.jpg",
+    "date": "2020"
+  }
+]

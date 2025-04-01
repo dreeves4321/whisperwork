@@ -1,0 +1,12 @@
+{
+    "name": "Daniel Reeves",
+    "descriptors": ["Designer", "Builder", "Scientist"],
+    "bio": "I'm a designer and builder of interactive experiences. I'm also a scientist. I'm currently the Director of Design at the All of Us Research Program, part of the National Institutes of Health.",
+    "email": "dreeves4321@gmail.com",
+    "phone": "+1 (202) 444-1000",
+    "location": "Watertown, MA",
+    "social": {
+        "linkedin": "https://www.linkedin.com/in/daniel-reeves-b71000100/",
+        "github": "https://github.com/dreeves4321"
+    }
+}

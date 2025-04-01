@@ -1,0 +1,313 @@
+// Variables
+// Colors
+$accent-color-dark: #125A5D;
+$accent-color-mid: #2A7E81;
+$accent-color-light: #9EBDBC;
+$text-color-dark: #3B3E3E;
+$text-color-light: #5A6262;
+$text-color-contrast: #ffffff;
+$surface-color-line: #EFE3DD;
+$surface-color-mid: #F5EBE6;
+$surface-color-light: #FCF5F0;
+$surface-color-shader: rgba(34, 36, 36, 0.77);
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-serif: 'Playfair Display', serif;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Type sizes
+$font-size-small: calc(14 / 16 * 1rem);
+$font-size-medium: calc(16 / 16 * 1rem);
+$font-size-large: calc(20 / 16 * 1rem);
+$font-size-hsmall: calc(20 / 16 * 1rem);
+$font-size-hmedium: calc(24 / 16 * 1rem);
+$font-size-hlarge: calc(36 / 16 * 1rem);
+$font-size-hxl: calc(48 / 16 * 1rem);
+
+// Spacing
+$spacing-unit: 10px;
+$spacing-unit-2: calc(2 * $spacing-unit);
+$spacing-unit-3: calc(3 * $spacing-unit);
+$spacing-unit-4: calc(4 * $spacing-unit);
+$spacing-unit-5: calc(5 * $spacing-unit);
+$spacing-unit-6: calc(6 * $spacing-unit);
+
+// main layout
+$content-width: 1100px;
+$content-hpadding: $spacing-unit-5;
+$content-vpadding: $spacing-unit-3;
+
+// Breakpoints - let's use one for now
+$tablet: 768px;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $surface-color-light;
+  color: $text-color-dark;
+  font-weight: $font-weight-normal;
+  line-height: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $text-color-dark;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: $accent-color-dark;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($accent-color-dark, 10%);
+  }
+}
+
+
+// Layouts
+.page-container {
+  margin: $spacing-unit-3 auto;
+}
+
+.highlight-container {
+  background-color: $surface-color-mid;
+}
+
+.content-container {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: $content-vpadding $content-hpadding;
+
+  @include respond-to($tablet) {
+    padding: $content-vpadding $content-hpadding;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+// Components
+.nav {
+  padding: 15px 0 10px 0;
+  background-color: $surface-color-mid;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__logo {
+    font-size: $font-size-large;
+    font-weight: bold;
+    color: $accent-color-mid;
+  }
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+    a {
+      font-size: $font-size-medium;
+      letter-spacing: calc(0.01 * $font-size-medium);
+      color: $text-color-light;
+      text-decoration: none;
+      font-weight: $font-weight-semibold;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        font-weight: $font-weight-bold;
+        letter-spacing: 0;
+      }
+
+      &.active {
+        border-bottom-color: $accent-color-light;
+        font-weight: $font-weight-bold; 
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
+// footer
+.footer {
+  padding: 30px 0;
+  background-color: $surface-color-mid;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+// Portfolio items
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: $surface-color-light;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 1.5rem;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    color: $text-color-light;
+  }
+}
+
+// Modal
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $surface-color-shader;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+
+  &__content {
+    background-color: $surface-color-light;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: $accent-color-dark;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
+
+// Threads filter
+.thread-filter {
+  max-width: $content-width;
+  display: flex;
+  gap: $spacing-unit-3;
+  margin: 0 auto;
+  padding: $spacing-unit-3 $content-hpadding;
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 320px;
+  }
+
+  &__button {
+    padding: 0.75rem 1.5rem;
+    margin-left: -1.5rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: none;
+    color: $text-color-dark;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    text-align: left;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+
+    &:hover:not(.thread-filter__button--active) {
+      background-color: rgba($accent-color-light, 0.2);
+    }
+    
+    &:focus:not(.thread-filter__button--active) {
+      background-color: rgba($accent-color-light, 0.2);
+    }
+
+    &--active {
+      background-color: rgba($accent-color-light, 0.4);
+      color: $accent-color-dark;
+      font-weight: $font-weight-bold;
+
+      &:hover {
+        background-color: rgba($accent-color-light, 0.6);
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__description {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-normal;
+    color: $text-color-dark;
+  }
+
+  &__featured {
+    .portfolio-item {
+      max-width: 800px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+
+    &__buttons {
+      flex-direction: row;
+      flex-wrap: wrap;
+      min-width: auto;
+    }
+  }
+}
