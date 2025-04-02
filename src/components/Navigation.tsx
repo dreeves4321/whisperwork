@@ -6,14 +6,14 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className="nav">
-      <div className="nav__container content-container">
+      <div className="nav__container">
         <ul className="nav__links">
           <li>
             <Link 
               to="/" 
               className={location.pathname === '/' ? 'active' : ''}
             >
-              Portfolio
+              Work
             </Link>
           </li>
           <li>
@@ -21,7 +21,7 @@ const Navigation: React.FC = () => {
               to="/about" 
               className={location.pathname === '/about' ? 'active' : ''}
             >
-              About
+              About Me
             </Link>
           </li>
           <li>

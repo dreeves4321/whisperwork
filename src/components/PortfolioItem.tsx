@@ -11,19 +11,22 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ item, onGalleryClick }) =
   const itemContent = (
     <>
       <img
-        src={`/images/${item.thumbnail}`}
+        src={`${process.env.PUBLIC_URL}/images/${item.thumbnail}`}
         alt={item.title}
         className="portfolio-item__image"
       />
       <div className="portfolio-item__content">
-        <h3 className="portfolio-item__title">{item.title}</h3>
+        <h2 className="portfolio-item__title">{item.title}</h2>
+        <p className="portfolio-item__client">{item.client}</p>        
         <p className="portfolio-item__description">{item.description}</p>
+        <button className="portfolio-item__button">Read the case study</button>
       </div>
+
     </>
   );
 
   return (
-    <div className="portfolio-item">
+    <div className="portfolio-item" >
       {item.type === 'case-study' ? (
         <Link to={`/case-study/${item.id}`}>{itemContent}</Link>
       ) : (

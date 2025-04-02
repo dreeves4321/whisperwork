@@ -7,6 +7,7 @@ interface ThreadFilterProps {
   activeThread: string | null;
   onThreadSelect: (threadId: string | null) => void;
   workItems: WorkItem[];
+  onGalleryClick: (item: WorkItem) => void;
 }
 
 const ThreadFilter: React.FC<ThreadFilterProps> = ({
@@ -14,6 +15,7 @@ const ThreadFilter: React.FC<ThreadFilterProps> = ({
   activeThread,
   onThreadSelect,
   workItems,
+  onGalleryClick,
 }) => {
   // Find the featured work item for the active thread
   const getFeaturedItem = () => {
@@ -36,12 +38,7 @@ const ThreadFilter: React.FC<ThreadFilterProps> = ({
   return (
     <div className="thread-filter">
       <div className="thread-filter__buttons">
-        {/* <button
-          className={`thread-filter__button ${!activeThread ? 'thread-filter__button--active' : ''}`}
-          onClick={() => onThreadSelect(null)}
-        >
-          All
-        </button> */}
+        <p>There are several <b>threads</b> weaving through my work —</p>
         {threads.map((thread) => (
           <button
             key={thread.id}
@@ -58,7 +55,7 @@ const ThreadFilter: React.FC<ThreadFilterProps> = ({
         
         {featuredItem && (
           <div className="thread-filter__featured">
-            <PortfolioItem item={featuredItem} />
+            <PortfolioItem item={featuredItem} key={featuredItem.id} onGalleryClick={() => onGalleryClick(featuredItem)} />
           </div>
         )}
         {threadDescription && (

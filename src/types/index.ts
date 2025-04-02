@@ -13,6 +13,7 @@ export interface WorkItem {
   threads: string[];
   thumbnail: string;
   date: string;
+  client: string;
 }
 
 export interface GalleryItem extends WorkItem {
@@ -23,7 +24,6 @@ export interface GalleryItem extends WorkItem {
 
 export interface CaseStudy extends WorkItem {
   type: 'case-study';
-  client: string;
   problem: string;
   solution: string;
   results: string;

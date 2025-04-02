@@ -9,7 +9,8 @@
       "interactive-experiences"
     ],
     "thumbnail": "healthcare-stories-1.jpg",
-    "date": "2023"
+    "date": "2023",
+    "client": "Mitre Corporation"
   },
   {
     "id": "build-a-lamp",
@@ -20,7 +21,8 @@
       "interactive-experiences"
     ],
     "thumbnail": "build-a-lamp-1.jpg",
-    "date": "2022"
+    "date": "2022",
+    "client": "New-York Historical Society"
   },
   {
     "id": "aou",
@@ -31,6 +33,7 @@
       "program-design"
     ],
     "thumbnail": "aou-1.jpg",
-    "date": "2020"
+    "date": "2020",
+    "client": "National Institutes of Health"
   }
 ]

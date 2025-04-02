@@ -43,6 +43,10 @@ const Portfolio: React.FC = () => {
             throw new Error('Threads data is not an array');
           }
           setThreads(threadsData);
+          // Set the first thread as active if there are any threads
+          if (threadsData.length > 0) {
+            setActiveThread(threadsData[0].id);
+          }
         } catch (parseError) {
           console.error('Error parsing threads JSON:', parseError);
           throw new Error(`Failed to parse threads JSON: ${parseError instanceof Error ? parseError.message : 'Unknown error'}`);
@@ -160,7 +164,7 @@ const Portfolio: React.FC = () => {
   }
 
   return (
-    <div className="page-container">
+    <div className="portfolio page-container">
       <div className="content-container personal-info">        
           <h1>{personal.name}</h1>
           <p>{personal.descriptors.join(' · ')}</p>
@@ -172,22 +176,49 @@ const Portfolio: React.FC = () => {
           activeThread={activeThread}
           onThreadSelect={setActiveThread}
           workItems={workItems}
+          onGalleryClick={handleGalleryClick}
         />
       </div>
       <div className="content-container">
-        <div className="grid">
-          {filteredItems.length === 0 ? (
-            <p>No items to display</p>
-          ) : (
-            filteredItems.map((item) => (
-              <PortfolioItem
-                key={item.id}
-                item={item}
-                onGalleryClick={() => handleGalleryClick(item)}
-              />
-            ))
-          )}
-        </div>
+        {filteredItems.length === 0 ? (
+          <p>No items to display</p>
+        ) : (
+          <>
+            {filteredItems.some(item => item.type === 'case-study') && (
+              <section className="portfolio-section portfolio-section--case-study">
+                <p>Case studies for <span className="thread-name">{threads.find(t => t.id === activeThread)?.name || 'all threads'}</span></p>
+                <div className="grid">
+                  {filteredItems
+                    .filter(item => item.type === 'case-study')
+                    .map((item) => (
+                      <PortfolioItem
+                        key={item.id}
+                        item={item}
+                        onGalleryClick={() => handleGalleryClick(item)}
+                      />
+                    ))}
+                </div>
+              </section>
+            )}
+            <hr className="portfolio-divider" />
+            {filteredItems.some(item => item.type === 'gallery') && (
+              <section className="portfolio-section portfolio-section--gallery">
+                <p>Gallery of <span className="thread-name">{threads.find(t => t.id === activeThread)?.name || 'all threads'}</span></p>
+                <div className="grid">
+                  {filteredItems
+                    .filter(item => item.type === 'gallery')
+                    .map((item) => (
+                      <PortfolioItem
+                        key={item.id}
+                        item={item}
+                        onGalleryClick={() => handleGalleryClick(item)}
+                      />
+                    ))}
+                </div>
+              </section>
+            )}
+          </>
+        )}
         {selectedGalleryItem && (
           <GalleryModal
             item={selectedGalleryItem}
