@@ -16,10 +16,14 @@ export interface WorkItem {
   client: string;
 }
 
+export interface GalleryImage {
+  src: string;
+  caption: string;
+}
+
 export interface GalleryItem extends WorkItem {
   type: 'gallery';
-  images: string[];
-  caption?: string;
+  images: GalleryImage[];
 }
 
 export interface CaseStudy extends WorkItem {
