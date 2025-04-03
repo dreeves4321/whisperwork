@@ -7,6 +7,13 @@ const Navigation: React.FC = () => {
   return (
     <nav className="nav">
       <div className="nav__container">
+        <Link to="/" className="nav__back">
+          <img 
+            src={`${process.env.PUBLIC_URL}/data/icons/back-arrow.svg`} 
+            alt="Back to portfolio" 
+            className="nav__back-icon"
+          />
+        </Link>
         <ul className="nav__links">
           <li>
             <Link 

@@ -19,7 +19,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ item, onGalleryClick }) =
         <h2 className="portfolio-item__title">{item.title}</h2>
         <p className="portfolio-item__client">{item.client}</p>        
         <p className="portfolio-item__description">{item.description}</p>
-        <button className="portfolio-item__button">Read the case study</button>
+        <div className="button__secondary portfolio-item__button">Read the case study</div>
       </div>
 
     </>

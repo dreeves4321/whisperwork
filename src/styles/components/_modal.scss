@@ -35,7 +35,7 @@ body.modal-open {
     max-height: 94vh;
     margin: 0 auto;
     padding: 0 $spacing-unit-2;
-    border-radius: $spacing-unit;
+    border-radius: $spacing-unit-1;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -45,8 +45,7 @@ body.modal-open {
   &__content {
     display: flex;
     flex-direction: column;
-    overflow-y: auto;  
-    padding-bottom: $spacing-unit-2;
+    overflow-y: auto;    
   }
 
   &__hero {
@@ -79,7 +78,7 @@ body.modal-open {
   }
 
   &__title {
-    font-size: $font-size-hlarge;
+    font-size: $font-size-header-large;
     margin-bottom: 1rem;
     color: $text-color-dark;
   }

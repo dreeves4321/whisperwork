@@ -6,37 +6,39 @@ $accent-color-light: #9EBDBC;
 $text-color-dark: #3B3E3E;
 $text-color-light: #5A6262;
 $text-color-contrast: #ffffff;
-$surface-color-line: #EFE3DD;
+$text-color-accent: #826353;
+$surface-color-line: #F2DFD5;
 $surface-color-mid: #F5EBE6;
 $surface-color-light: #FCF5F0;
-$surface-color-shader: rgba(34, 36, 36, 0.77);
+$surface-color-shader: rgba(48, 38, 31, 0.83);
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
 $font-family-serif: 'Playfair Display', serif;
+$font-weight-light: 300;
 $font-weight-normal: 400;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
+$font-weight-semibold: 500;
+$font-weight-bold: 600;
 
 // Type sizes
 $font-size-small: calc(14 / 16 * 1rem);
 $font-size-medium: calc(16 / 16 * 1rem);
 $font-size-large: calc(20 / 16 * 1rem);
-$font-size-hsmall: calc(20 / 16 * 1rem);
-$font-size-hmedium: calc(24 / 16 * 1rem);
-$font-size-hlarge: calc(32 / 16 * 1rem);
-$font-size-hxlarge: calc(48 / 16 * 1rem);
+$font-size-header-small: calc(20 / 16 * 1rem);
+$font-size-header-medium: calc(23 / 16 * 1rem);
+$font-size-header-large: calc(32 / 16 * 1rem);
+$font-size-header-xlarge: calc(48 / 16 * 1rem);
 
 // Spacing
-$spacing-unit: 10px;
-$spacing-unit-2: calc(2 * $spacing-unit);
-$spacing-unit-3: calc(3 * $spacing-unit);
-$spacing-unit-4: calc(4 * $spacing-unit);
-$spacing-unit-5: calc(5 * $spacing-unit);
-$spacing-unit-6: calc(6 * $spacing-unit);
+$spacing-unit-1: 10px;
+$spacing-unit-2: calc(2 * $spacing-unit-1);
+$spacing-unit-3: calc(3 * $spacing-unit-1);
+$spacing-unit-4: calc(4 * $spacing-unit-1);
+$spacing-unit-5: calc(5 * $spacing-unit-1);
+$spacing-unit-6: calc(6 * $spacing-unit-1);
 
 // main layout
-$content-width: 1100px;
+$content-width: 1050px;
 $content-hpadding: $spacing-unit-5;
 $content-vpadding: $spacing-unit-4;
 
@@ -52,6 +54,7 @@ $tablet: 768px;
 
 // Import component styles
 @import 'components/modal';
+@import 'components/CaseStudy';
 
 // Base styles
 * {
@@ -66,14 +69,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $surface-color-light;
   color: $text-color-dark;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-light;
   line-height: 125%;
   font-size: $font-size-medium;
 }
 
 
 strong, b{
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-bold;
+  color: $text-color-accent;
 }
 
 h1, h2, h3{
@@ -82,25 +86,25 @@ h1, h2, h3{
 }
 
 h1 {
-  font-size: $font-size-hxlarge;
+  font-size: $font-size-header-xlarge;
   font-weight: $font-weight-semibold;
   line-height: 125%;
 }
 
 h2 {
-  font-size: $font-size-hlarge;
-  font-weight: $font-weight-bold;
+  font-size: $font-size-header-large;
+  font-weight: $font-weight-semibold;
   line-height: 125%;
 }
 
 h3 {
-  font-size: $font-size-hmedium;
+  font-size: $font-size-header-medium;
   font-weight: $font-weight-semibold;
   line-height: 125%;
 }
 
 h4 {
-  font-size: $font-size-hsmall;
+  font-size: $font-size-header-small;
   font-weight: $font-weight-semibold;
   color: $text-color-dark;
   font-family: $font-family-sans-serif;
@@ -139,7 +143,27 @@ a {
   }
 }
  
+// buttons
+.button{
+  display: block;
+  padding: $spacing-unit-1 $spacing-unit-4;
+  border-radius: 5px;
+  font-weight: $font-weight-semibold;
+  text-align: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
 
+  &__secondary{
+    @extend .button;
+    background: none;
+    border: 1px solid $accent-color-light;
+    color: $accent-color-dark;
+        
+    &:hover {
+      color: $text-color-dark;
+      background-color: rgba($accent-color-light, 0.2);
+    }
+  }
+}
 
 // Pages
 .portfolio{
@@ -170,7 +194,8 @@ a {
   .portfolio-divider{
     margin: $spacing-unit-2 0;
     border: 0;
-    border-top: 1px solid $surface-color-line;
+    height: 1px;
+    background-color: $surface-color-line;
   }
   
   // Portfolio items
@@ -239,8 +264,17 @@ a {
       aspect-ratio: auto;
 
       &:hover {
+        //background-color: rgba(0, 0, 0, 0.02);
         transform: none;
-        box-shadow: none;        
+
+        .portfolio-item__image {
+          transform: scale(0.99);
+        }
+        
+        .button__secondary {
+          background-color: rgba($accent-color-light, 0.2);
+        }
+        
       }
       
       a {
@@ -253,27 +287,24 @@ a {
       }
       
       &__image{
-        width: 60%;
+        flex: 1;
+        min-width: 0;
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         transition: transform 0.2s ease;
-
-        &:hover {
-          transform: scale(0.99);
-        }
-    
+        
       }
       
       &__content {
+        flex: 0 0 auto;
         width: 40%;
+        min-width: 330px;
         background: none;        
-        min-width: 350px;
-        max-height: none;
         position: relative;
         border-radius: 0;
-        padding: $spacing-unit-2 $spacing-unit;
+        padding: $spacing-unit-2 $spacing-unit-1;
         color: $text-color-dark;
       }
 
@@ -283,7 +314,7 @@ a {
       }
 
       &__title {
-        font-size: $font-size-hmedium;
+        font-size: $font-size-header-medium;
         margin-bottom: 0.5rem;
       }
 
@@ -301,22 +332,8 @@ a {
       }
 
       &__button{
+        margin-top: $spacing-unit-2;
         display: block;
-        width: 100%;
-        background: none;
-        border: 1px solid $surface-color-line;
-        color: $accent-color-dark;
-        font-weight: $font-weight-semibold;
-        padding: $spacing-unit $spacing-unit;
-        border-radius: 5px;
-        text-align: center;
-        transition: background-color 0.2s ease, color 0.2s ease;
-        
-        &:hover {
-          color: $text-color-dark;
-          background-color: rgba($accent-color-light, 0.2);
-        }
-    
       }
     }
   }
@@ -337,6 +354,27 @@ a {
     justify-content: flex-end;
   }
 
+  &__back {
+    display: flex;
+    align-items: center;
+    color: $text-color-light;
+    text-decoration: none;
+    margin-right: auto;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    }
+  }
+
   &__logo {
     font-size: $font-size-large;
     font-weight: bold;
@@ -353,7 +391,7 @@ a {
       letter-spacing: calc(0.01 * $font-size-medium);
       color: $text-color-light;
       text-decoration: none;
-      font-weight: $font-weight-semibold;
+      font-weight: $font-weight-normal;
       padding-bottom: 2px;
       border-bottom: 1px solid transparent;
       transition: border-color 0.3s ease, color 0.3s ease;
@@ -419,7 +457,7 @@ a {
     transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     text-align: left;
     color: $text-color-dark;
-    font-size: $font-size-hmedium;
+    font-size: $font-size-header-medium;
     font-weight: $font-weight-normal;
     font-family: $font-family-serif;
     box-sizing: border-box;
@@ -435,7 +473,7 @@ a {
     &--active {
       background-color: rgba($accent-color-light, 0.4);
       color: $accent-color-dark;
-      font-weight: $font-weight-bold;
+      font-weight: $font-weight-semibold;
 
       &:hover {
         background-color: rgba($accent-color-light, 0.6);

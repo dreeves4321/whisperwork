@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { useParams, useNavigate } from 'react-router-dom';
 import { CaseStudy as CaseStudyType } from '../types';
 
@@ -10,7 +11,7 @@ const CaseStudy: React.FC = () => {
   useEffect(() => {
     const loadCaseStudy = async () => {
       try {
-        const response = await fetch(`/data/caseStudy_${id}.json`);
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/caseStudy_${id}.json`);
         if (!response.ok) {
           throw new Error('Case study not found');
         }
@@ -31,69 +32,80 @@ const CaseStudy: React.FC = () => {
 
   return (
     <div className="case-study page-container">
-      <h1>{caseStudy.title}</h1>
-      <p className="case-study__client">for {caseStudy.client}</p>
+      <img src={`${process.env.PUBLIC_URL}/images/${caseStudy.heroImage}`} alt={caseStudy.title} className="case-study__hero-image" />
+      <div className="content-container">
+        <div className="case-study__title-container">
+          <h1>{caseStudy.title}</h1>
+          <p className="case-study__client">for {caseStudy.client}</p>
+        </div>
 
-      <section className="case-study__section">
-        <h2>Problem</h2>
-        <p>{caseStudy.problem}</p>
-      </section>
+        <section className="case-study__topmatter">
+          <h3>Problem</h3>
+          <p>{caseStudy.problem}</p>
+        </section>
 
-      <section className="case-study__section">
-        <h2>Solution</h2>
-        <p>{caseStudy.solution}</p>
-      </section>
+        <section className="case-study__topmatter">
+          <h3>Solution</h3>
+          <p>{caseStudy.solution}</p>
+        </section>
 
-      <section className="case-study__section">
-        <h2>Results</h2>
-        <p>{caseStudy.results}</p>
-      </section>
+        <section className="case-study__topmatter">
+          <h3>Results</h3>
+          <p>{caseStudy.results}</p>
+        </section>
 
-      <section className="case-study__section">
-        <h2>Commitment</h2>
-        <p>{caseStudy.commitment}</p>
-      </section>
+        <section className="case-study__topmatter">
+          <h3>Commitment</h3>
+          <p>{caseStudy.commitment}</p>
+        </section>
 
-      {caseStudy.contentBlocks.map((block, index) => {
-        switch (block.type) {
-          case 'text':
-            return (
-              <section key={index} className="case-study__content-block">
-                <p>{block.content}</p>
-              </section>
-            );
-          case 'image':
-            return (
-              <section key={index} className="case-study__content-block">
-                <img
-                  src={`/images/${block.content}`}
-                  alt={block.caption || ''}
-                  className="case-study__image"
-                />
-                {block.caption && (
-                  <p className="case-study__caption">{block.caption}</p>
-                )}
-              </section>
-            );
-          case 'quote':
-            return (
-              <blockquote key={index} className="case-study__quote">
-                {block.content}
-              </blockquote>
-            );
-          case 'list':
-            return (
-              <ul key={index} className="case-study__list">
-                {Array.isArray(block.content) &&
-                  block.content.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-              </ul>
-            );
-          default:
-            return null;
-        }
-      })}
+        {caseStudy.contentBlocks && caseStudy.contentBlocks.map((block, index) => {
+          switch (block.type) {
+            case 'section':
+              return (
+                <>
+                  <hr className="case-study__divider" />
+                  <h2 key={index} className="case-study__section-title">
+                    {block.text}
+                  </h2>
+                </>
+              );
+            case 'body':
+              return (
+                <section key={index} className="case-study__text-block">
+                  <ReactMarkdown>{block.text}</ReactMarkdown>
+                </section>
+              );
+            case 'image':
+              return (
+                <section key={index} className="case-study__image-block">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/images/${block.src}`}
+                    alt={block.alt || ''}
+                    className="case-study__image"
+                  />
+                  {block.text && (
+                    <p className="case-study__caption">{block.text}</p>
+                  )}
+                </section>
+              );
+            case 'quote':
+              return (
+                <blockquote key={index} className="case-study__quote-block">
+                  {block.text}
+                </blockquote>
+              );
+            case 'button':
+              return (
+                <a key={index} className="button__secondary" href={block.url} target="_blank" rel="noopener noreferrer">
+                  {block.text}
+                </a>
+              );            
+            default:
+              return null;
+          }
+        })}
+      </div>
     </div>
   );
 };

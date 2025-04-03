@@ -32,14 +32,45 @@ export interface CaseStudy extends WorkItem {
   solution: string;
   results: string;
   commitment: string;
+  heroImage: string;
   contentBlocks: ContentBlock[];
 }
 
-export interface ContentBlock {
-  type: 'text' | 'image' | 'quote' | 'list';
-  content: string | string[];
-  caption?: string;
+// Base interface with common fields
+interface BaseContentBlock {
+  type: 'section' | 'body' | 'image' | 'quote' | 'button';
 }
+
+// Specific interfaces for each type
+interface TextContentBlock extends BaseContentBlock {
+  type: 'section' | 'body';
+  text: string;
+}
+
+interface ImageContentBlock extends BaseContentBlock {
+  type: 'image';
+  text: string; // caption
+  src: string;  // required for images
+  alt?: string;
+}
+
+interface QuoteContentBlock extends BaseContentBlock {
+  type: 'quote';
+  text: string;
+}
+
+interface ButtonContentBlock extends BaseContentBlock {
+  type: 'button';
+  text: string;
+  url: string;  // required for buttons
+}
+
+// Union type combining all content block types
+export type ContentBlock = 
+  | TextContentBlock 
+  | ImageContentBlock 
+  | QuoteContentBlock 
+  | ButtonContentBlock;
 
 export interface Personal {
   name: string;

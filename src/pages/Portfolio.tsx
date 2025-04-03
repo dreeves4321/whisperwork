@@ -186,7 +186,7 @@ const Portfolio: React.FC = () => {
           <>
             {filteredItems.some(item => item.type === 'case-study') && (
               <section className="portfolio-section portfolio-section--case-study">
-                <p>Case studies for <span className="thread-name">{threads.find(t => t.id === activeThread)?.name || 'all threads'}</span></p>
+                <p>Case studies for <strong>{threads.find(t => t.id === activeThread)?.name || 'all threads'}</strong></p>
                 <div className="grid">
                   {filteredItems
                     .filter(item => item.type === 'case-study')
@@ -203,7 +203,7 @@ const Portfolio: React.FC = () => {
             <hr className="portfolio-divider" />
             {filteredItems.some(item => item.type === 'gallery') && (
               <section className="portfolio-section portfolio-section--gallery">
-                <p>Gallery of <span className="thread-name">{threads.find(t => t.id === activeThread)?.name || 'all threads'}</span></p>
+                <p>Gallery of <strong>{threads.find(t => t.id === activeThread)?.name || 'all threads'}</strong></p>
                 <div className="grid">
                   {filteredItems
                     .filter(item => item.type === 'gallery')

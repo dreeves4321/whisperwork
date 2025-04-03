@@ -1,1 +1,24 @@
-{"title":"AoU","client":"NIH","problem":"Problem text","solution":"solution text","results":"results text","commitment":"commitment text","content blocks":[{"type":"section","text":"Overview"},{"type":"body","text":"stuff stuff stuff"},{"type":"image","src":"aou-1.jpg","text":"caption text"}]}
+{
+  "title": "AoU",
+  "client": "NIH",
+  "problem": "Problem text",
+  "solution": "solution text",
+  "results": "results text",
+  "commitment": "commitment text",
+  "heroImage": "aou-1.jpg",
+  "contentBlocks": [
+    {
+      "type": "section",
+      "text": "Overview"
+    },
+    {
+      "type": "body",
+      "text": "stuff stuff stuff"
+    },
+    {
+      "type": "image",
+      "src": "aou-1.jpg",
+      "text": "caption text"
+    }
+  ]
+}
