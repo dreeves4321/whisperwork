@@ -7,11 +7,11 @@ const Navigation: React.FC = () => {
   return (
     <nav className="nav">
       <div className="nav__container">
-        <Link to="/" className="nav__back">
+        <Link to="/" className="nav__logo">
           <img 
-            src={`${process.env.PUBLIC_URL}/data/icons/back-arrow.svg`} 
+            src={`${process.env.PUBLIC_URL}/icons/logo.svg`} 
             alt="Back to portfolio" 
-            className="nav__back-icon"
+            className="nav__logo-icon"
           />
         </Link>
         <ul className="nav__links">
@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
               to="/about" 
               className={location.pathname === '/about' ? 'active' : ''}
             >
-              About Me
+              About
             </Link>
           </li>
           <li>

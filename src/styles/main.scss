@@ -123,11 +123,15 @@ a {
   }
 }
 
+hr {
+  margin: $spacing-unit-2 0;
+  border: 0;
+  height: 1px;
+  background-color: $surface-color-line;
+}
+
 
 // Layouts
-.page-container {
-  margin: $spacing-unit-3 auto;
-}
 
 .highlight-container {
   background-color: $surface-color-mid;
@@ -135,11 +139,11 @@ a {
 
 .content-container {
   max-width: $content-width;
-  margin: 0 auto;
-  padding: $content-vpadding $content-hpadding;
+  margin: $content-vpadding auto;
+  padding: 0 $content-hpadding;
 
   @include respond-to($tablet) {
-    padding: $content-vpadding $content-hpadding;
+    padding: 0 $content-hpadding;
   }
 }
  
@@ -168,6 +172,8 @@ a {
 // Pages
 .portfolio{
   .portfolio-section{
+    margin-bottom: $spacing-unit-4;
+    
     p{
       margin-bottom: $spacing-unit-2;
     }
@@ -185,24 +191,17 @@ a {
       > * {
         flex: 1 1 300px;
         min-width: 300px;
-        max-width: 500px;
+        max-width: 490px;
       }
     }
     
   }
-  
-  .portfolio-divider{
-    margin: $spacing-unit-2 0;
-    border: 0;
-    height: 1px;
-    background-color: $surface-color-line;
-  }
-  
+
   // Portfolio items
   .portfolio-item {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1.5;
+    aspect-ratio: 1.62;
     border-radius: 10px;
     background-color: $surface-color-light;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -341,7 +340,7 @@ a {
 
 // Components
 .nav {
-  padding: 15px $content-hpadding 15px $content-hpadding;
+  padding: 8px $content-hpadding 8px $content-hpadding;
   background-color: $surface-color-mid;
   width: 100%;
   top: 0;
@@ -354,32 +353,29 @@ a {
     justify-content: flex-end;
   }
 
-  &__back {
+  &__logo {
     display: flex;
     align-items: center;
     color: $text-color-light;
     text-decoration: none;
     margin-right: auto;
-    padding: 8px;
+    padding: 2px;
     border-radius: 50%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
+    opacity: 0.8;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.05);
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.06);
     }
 
     &-icon {
-      width: 24px;
-      height: 24px;
-      filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+      width: 26px;
+      height: 26px;
+      //filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
     }
   }
 
-  &__logo {
-    font-size: $font-size-large;
-    font-weight: bold;
-    color: $accent-color-mid;
-  }
 
   &__links {
     display: flex;
@@ -412,7 +408,7 @@ a {
 
 // footer
 .footer {
-  padding: 0px 0;
+  padding: $content-vpadding $content-hpadding;
   background-color: $surface-color-mid;
   width: 100%;
   bottom: 0;
@@ -428,11 +424,18 @@ a {
 // Threads filter
 .thread-filter {
   max-width: $content-width;
-  display: flex;
-  gap: $spacing-unit-4;
   margin: 0 auto;
   padding: $content-vpadding $content-hpadding;
+  background-color: $surface-color-mid;
 
+  hr {
+    margin-top: $spacing-unit-1;
+  }
+
+  &__flex {
+    display: flex;
+    gap: $spacing-unit-4;
+  }
 
   &__buttons {
     display: flex;
@@ -485,13 +488,7 @@ a {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-  }
-
-  &__description {
-    font-size: $font-size-medium;
-    font-weight: $font-weight-normal;
-    color: $text-color-dark;
+    gap: $spacing-unit-2;
   }
 
   &__featured {

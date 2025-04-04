@@ -170,15 +170,13 @@ const Portfolio: React.FC = () => {
           <p>{personal.descriptors.join(' · ')}</p>
       </div>
       
-      <div className="highlight-container">
-        <ThreadFilter
-          threads={threads}
-          activeThread={activeThread}
-          onThreadSelect={setActiveThread}
-          workItems={workItems}
-          onGalleryClick={handleGalleryClick}
-        />
-      </div>
+      <ThreadFilter
+        threads={threads}
+        activeThread={activeThread}
+        onThreadSelect={setActiveThread}
+        workItems={workItems}
+        onGalleryClick={handleGalleryClick}
+      />
       <div className="content-container">
         {filteredItems.length === 0 ? (
           <p>No items to display</p>
@@ -200,7 +198,9 @@ const Portfolio: React.FC = () => {
                 </div>
               </section>
             )}
-            <hr className="portfolio-divider" />
+            {filteredItems.some(item => item.type === 'case-study') && filteredItems.some(item => item.type === 'gallery') && (
+              <hr/>
+            )}
             {filteredItems.some(item => item.type === 'gallery') && (
               <section className="portfolio-section portfolio-section--gallery">
                 <p>Gallery of <strong>{threads.find(t => t.id === activeThread)?.name || 'all threads'}</strong></p>

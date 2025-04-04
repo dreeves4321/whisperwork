@@ -36,33 +36,35 @@ const ThreadFilter: React.FC<ThreadFilterProps> = ({
   const threadDescription = getThreadDescription();
 
   return (
-    <div className="thread-filter">
-      <div className="thread-filter__buttons">
-        <p>There are several <b>threads</b> weaving through my work —</p>
-        {threads.map((thread) => (
-          <button
-            key={thread.id}
-            className={`thread-filter__button ${
-              activeThread === thread.id ? 'thread-filter__button--active' : ''
-            }`}
-            onClick={() => onThreadSelect(thread.id)}
-          >
-            {thread.name}
-          </button>
-        ))}
-      </div>
-      <div className="thread-filter__content">
-        
-        {featuredItem && (
-          <div className="thread-filter__featured">
-            <PortfolioItem item={featuredItem} key={featuredItem.id} onGalleryClick={() => onGalleryClick(featuredItem)} />
-          </div>
-        )}
+    <section className="thread-filter">
+      <p>There are several <b>threads</b> weaving through my work —</p>
+      <hr />
+      <div className="thread-filter__flex">
+        <div className="thread-filter__buttons">
+          {threads.map((thread) => (
+            <button
+              key={thread.id}
+              className={`thread-filter__button ${
+                activeThread === thread.id ? 'thread-filter__button--active' : ''
+              }`}
+              onClick={() => onThreadSelect(thread.id)}
+            >
+              {thread.name}
+            </button>
+          ))}
+        </div>
+        <div className="thread-filter__content">          
         {threadDescription && (
-          <p className="thread-filter__description">{threadDescription}</p>
-        )}
+            <p className="thread-filter__description">{threadDescription}</p>
+          )}
+          {featuredItem && (
+            <div className="thread-filter__featured">
+              <PortfolioItem item={featuredItem} key={featuredItem.id} onGalleryClick={() => onGalleryClick(featuredItem)} />
+            </div>
+          )}          
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

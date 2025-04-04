@@ -20,28 +20,26 @@ const App: React.FC = () => {
             <Route path="/case-study/:id" element={<CaseStudy />} />
           </Routes>
         </main>
-        <footer className="footer">
-          <div className="content-container">
-            <p>
-              Built on{' '}
-              <a
-                href="https://github.com/danielreeves/whisperwork"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhisperWork
-              </a>
-              , my open-source portfolio platform.{' '}
-              <a
-                href="https://github.com/danielreeves/Portfolio"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contribute on GitHub
-              </a>
-              .
-            </p>
-          </div>
+        <footer className="footer content-container">          
+          <p>
+            Built on{' '}
+            <a
+              href="https://github.com/danielreeves/whisperwork"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhisperWork
+            </a>
+            , my open-source portfolio platform.{' '}
+            <a
+              href="https://github.com/danielreeves/Portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contribute on GitHub
+            </a>
+            .
+          </p>          
         </footer>
       </div>
     </Router>
