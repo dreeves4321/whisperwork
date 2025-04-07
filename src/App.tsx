@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Portfolio from './pages/Portfolio';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import CaseStudy from './pages/CaseStudy';
+import { usePersonalData } from './hooks/usePersonalData';
 import './styles/main.scss';
 
 const App: React.FC = () => {
+  const { personal } = usePersonalData();
+
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="app">
@@ -16,30 +18,28 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/case-study/:id" element={<CaseStudy />} />
           </Routes>
         </main>
-        <footer className="footer content-container">          
+        <footer className="footer">
+          <div className="footer-content">
+            <p>
+              contact: <b><a href={`mailto:${personal?.email}`} target="_blank" rel="noopener noreferrer">{personal?.email}</a></b>
+              {' // '}
+            <b><a href={personal?.["secondary contact"]?.url} target="_blank" rel="noopener noreferrer">{personal?.["secondary contact"]?.text}</a></b>
+          </p>
           <p>
             Built on{' '}
-            <a
+            <b><a
               href="https://github.com/danielreeves/whisperwork"
               target="_blank"
               rel="noopener noreferrer"
             >
               WhisperWork
-            </a>
-            , my open-source portfolio platform.{' '}
-            <a
-              href="https://github.com/danielreeves/Portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Contribute on GitHub
-            </a>
-            .
-          </p>          
+            </a></b>
+              , an open-source portfolio.
+            </p>
+          </div>
         </footer>
       </div>
     </Router>

@@ -28,15 +28,7 @@ const Navigation: React.FC = () => {
               to="/about" 
               className={location.pathname === '/about' ? 'active' : ''}
             >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/contact" 
-              className={location.pathname === '/contact' ? 'active' : ''}
-            >
-              Contact
+              About Me
             </Link>
           </li>
         </ul>

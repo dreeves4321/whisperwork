@@ -79,6 +79,10 @@ export interface Personal {
   email: string;
   phone: string;
   location: string;
+  "secondary contact": {
+    text: string;
+    url: string;
+  };
   social: {
     linkedin: string;
     github: string;

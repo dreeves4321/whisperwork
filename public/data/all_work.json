@@ -5,11 +5,10 @@
     "description": "An interactive healthcare story engine that helps scientists showcase their work in context of national problem sets and information.",
     "type": "case-study",
     "threads": [
-      "health-it",
       "interactive-experiences"
     ],
     "thumbnail": "healthcare-stories-1.jpg",
-    "date": "2023",
+    "date": "2022",
     "client": "Mitre Corporation"
   },
   {
@@ -21,7 +20,7 @@
       "interactive-experiences"
     ],
     "thumbnail": "build-a-lamp-1.jpg",
-    "date": "2022",
+    "date": "2017",
     "client": "New-York Historical Society"
   },
   {
@@ -33,7 +32,81 @@
       "program-design"
     ],
     "thumbnail": "aou-1.jpg",
-    "date": "2020",
+    "date": "2022",
     "client": "National Institutes of Health"
+  },
+  {
+    "id": "maya",
+    "title": "Care Over Clicks",
+    "description": "Refocusing nursing on what matters — Building an EHR tailored to the needs of home-care agencies.",
+    "type": "case-study",
+    "threads": [
+      "health-it"
+    ],
+    "thumbnail": "maya-1.jpg",
+    "date": "2020",
+    "client": "Maya Home Health"
+  },
+  {
+    "id": "flux",
+    "title": "Flux Notes",
+    "description": "Capturing structured health data at the point of care without increasing clinician burden.",
+    "type": "gallery",
+    "threads": [
+      "health-it"
+    ],
+    "thumbnail": "fluxnotes-1.jpg",
+    "date": "2019",
+    "client": "MITRE Corporation"
+  },
+  {
+    "id": "oa",
+    "title": "Designing for Prior Auth",
+    "description": "Faster approvals, better outcomes. Software design for efficient, more intelligent protocol review, saving time and burden for insurers, providers, and hospitals.",
+    "type": "case-study",
+    "threads": [
+      "health-it",
+      "complex-problems"
+    ],
+    "thumbnail": "oa-1.jpg",
+    "date": "2020",
+    "client": ""
+  },
+  {
+    "id": "codametrix",
+    "title": "Automating Medical Coding",
+    "description": "",
+    "type": "gallery",
+    "threads": [
+      "ai-health"      
+    ],
+    "thumbnail": "codametrix-1.png",
+    "date": "2020",
+    "client": "CodaMetrix"
+  },
+  {
+    "id": "health-dollars",
+    "title": "Where Your Health Dollars Go",
+    "description": "An interactive map that tracks the origin, flow, and destination of money through the US healthcare system.",
+    "type": "gallery",
+    "threads": [
+      "complex-problems"
+    ],
+    "thumbnail": "health-dollars-1.jpg",
+    "date": "2025",
+    "client": "GoInvo"
+  },
+  {
+    "id": "access",
+    "title": "Partnering for Global Market Research ",
+    "description": "",
+    "type": "gallery",
+    "threads": [
+      "program-design"
+    ],
+    "thumbnail": "access-1.jpg",
+    "date": "2025",
+    "client": ""
   }
+
 ]

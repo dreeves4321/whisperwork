@@ -12,21 +12,21 @@
     "featured": "build-a-lamp"
   },
   {
-    "id": "complex-systems",
-    "name": "Complex Systems",
-    "description": "Breaking down and visualizing complex systems to make them understandable and manageable.",
-    "featured": "aou"
+    "id": "complex-problems",
+    "name": "Complex Problems",
+    "description": "Breaking down and visualizing complex problems to make them understandable and manageable.",
+    "featured": "health-dollars"
   },
   {
     "id": "health-it",
     "name": "Health IT",
     "description": "Developing healthcare technology solutions that improve patient outcomes and provider efficiency.",
-    "featured": "aou"
+    "featured": "maya"
   },
   {
     "id": "ai-health",
     "name": "AI in Health",
     "description": "Leveraging artificial intelligence to enhance healthcare delivery and decision-making processes.",
-    "featured": "aou"
+    "featured": "codametrix"
   }
 ]
