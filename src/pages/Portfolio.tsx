@@ -93,9 +93,15 @@ const Portfolio: React.FC = () => {
     loadData();
   }, []);
 
-  const filteredItems = activeThread
-    ? workItems.filter((item) => item.threads.includes(activeThread))
+  // Get items from the active thread
+  const activeThreadItems = activeThread
+    ? workItems.filter((item) => item.threads.includes(activeThread) && item.id !== threads.find(t => t.id === activeThread)?.featured)
     : workItems;
+
+  // Get items from other threads
+  const otherThreadItems = activeThread
+    ? workItems.filter((item) => !item.threads.includes(activeThread))
+    : [];
 
   const handleGalleryClick = async (item: WorkItem) => {
     if (item.type === 'gallery') {
@@ -178,44 +184,43 @@ const Portfolio: React.FC = () => {
         onGalleryClick={handleGalleryClick}
       />
       <div className="content-container">
-        {filteredItems.length === 0 ? (
+        {activeThreadItems.length === 0 && otherThreadItems.length === 0 ? (
           <p>No items to display</p>
         ) : (
           <>
-            {filteredItems.some(item => item.type === 'case-study') && (
-              <section className="portfolio-section portfolio-section--case-study">
-                <p>Case studies for <strong>{threads.find(t => t.id === activeThread)?.name || 'all threads'}</strong></p>
+            {/* Active Thread Items - Mixed Case Studies and Gallery Items */}
+            {activeThreadItems.length > 0 && (
+              <section className="portfolio-section portfolio-section__filtered">
+                <p className="portfolio-section__title">More <strong>{threads.find(t => t.id === activeThread)?.name || 'all threads'}</strong></p>
                 <div className="grid">
-                  {filteredItems
-                    .filter(item => item.type === 'case-study')
-                    .map((item) => (
+                  {activeThreadItems.map((item) => (
+                    <PortfolioItem
+                      key={item.id}
+                      item={item}
+                      onGalleryClick={() => handleGalleryClick(item)}
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Other Thread Items */}
+            {otherThreadItems.length > 0 && (
+              <>
+                <hr className="portfolio-divider" />
+                <section className="portfolio-section portfolio-section__all">
+                  <p className="portfolio-section__title">Other work</p>
+                  <div className="grid">
+                    {otherThreadItems.map((item) => (
                       <PortfolioItem
                         key={item.id}
                         item={item}
                         onGalleryClick={() => handleGalleryClick(item)}
                       />
                     ))}
-                </div>
-              </section>
-            )}
-            {filteredItems.some(item => item.type === 'case-study') && filteredItems.some(item => item.type === 'gallery') && (
-              <hr/>
-            )}
-            {filteredItems.some(item => item.type === 'gallery') && (
-              <section className="portfolio-section portfolio-section--gallery">
-                <p>Gallery of <strong>{threads.find(t => t.id === activeThread)?.name || 'all threads'}</strong></p>
-                <div className="grid">
-                  {filteredItems
-                    .filter(item => item.type === 'gallery')
-                    .map((item) => (
-                      <PortfolioItem
-                        key={item.id}
-                        item={item}
-                        onGalleryClick={() => handleGalleryClick(item)}
-                      />
-                    ))}
-                </div>
-              </section>
+                  </div>
+                </section>
+              </>
             )}
           </>
         )}

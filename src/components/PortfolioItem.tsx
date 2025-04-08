@@ -9,20 +9,20 @@ interface PortfolioItemProps {
 
 const PortfolioItem: React.FC<PortfolioItemProps> = ({ item, onGalleryClick }) => {
   const itemContent = (
-    <>
+    <div className="portfolio-item__layout-container">
       <img
         src={`${process.env.PUBLIC_URL}/images/${item.thumbnail}`}
         alt={item.title}
         className="portfolio-item__image"
       />
       <div className="portfolio-item__content">
-        <h2 className="portfolio-item__title">{item.title}</h2>
-        <p className="portfolio-item__client">{item.client}</p>        
-        <p className="portfolio-item__description">{item.description}</p>
+        <h3 className="portfolio-item__title">{item.title}</h3>
+        {item.client && <p className="portfolio-item__client">{item.client}</p>}
+        {item.description && <p className="portfolio-item__description">{item.description}</p>}
         <div className="button__secondary portfolio-item__button">Read the case study</div>
       </div>
 
-    </>
+    </div>
   );
 
   return (

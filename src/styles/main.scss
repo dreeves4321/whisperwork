@@ -42,8 +42,9 @@ $content-width: 1050px;
 $content-hpadding: $spacing-unit-5;
 $content-vpadding: $spacing-unit-4;
 
-// Breakpoints - let's use one for now
-$tablet: 768px;
+// Breakpoints 
+$tablet: 900px;
+$mobile: 500px;
 
 // Mixins
 @mixin respond-to($breakpoint) {
@@ -171,33 +172,7 @@ hr {
 
 // Pages
 .portfolio{
-  .portfolio-section{
-    margin-bottom: $spacing-unit-4;
-    
-    p{
-      margin-bottom: $spacing-unit-2;
-    }
-
-    .thread-name{
-      font-weight: $font-weight-bold;
-      color: $accent-color-dark;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      
-      > * {
-        flex: 1 1 300px;
-        min-width: 300px;
-        max-width: 490px;
-      }
-    }
-    
-  }
-
-  // Portfolio items
+  // Portfolio items (basic square)
   .portfolio-item {
     position: relative;
     overflow: hidden;
@@ -207,8 +182,17 @@ hr {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
 
+    p {
+      margin-bottom: 0;
+    }
+
     &:hover {
       transform: scale(0.99);
+    }
+    
+    &__layout-container {
+        height: 100%;
+        width: 100%;
     }
 
     &__image {
@@ -223,14 +207,13 @@ hr {
       border-top-left-radius: 10px;
       bottom: 0;
       right: 0;
-      width: auto;
+      width: 100%;
       background-color: $surface-color-shader;
       color: $text-color-contrast;
-      max-width: 90%;
       max-height: 66%;
     }
 
-    h2 {
+    h3 {
       color: $text-color-contrast;
     }
 
@@ -239,7 +222,8 @@ hr {
     }
 
     &__client {
-      font-size: $font-size-large;
+      color: $text-color-contrast;
+      font-weight: $font-weight-semibold;
     }
 
     &__description {
@@ -251,91 +235,116 @@ hr {
     }
   }
 
-  // Case study specific grid and portfolio item styles
-  .portfolio-section--case-study {
-    .grid{
-      display: block;
+  .portfolio-section{
+    margin-bottom: $spacing-unit-4;
+    
+    &__title{
+      margin-bottom: $spacing-unit-2;
     }
 
-    .portfolio-item {
-      max-width: 100%;
-      box-shadow: none;
-      aspect-ratio: auto;
+    .thread-name{
+      font-weight: $font-weight-bold;
+      color: $accent-color-dark;
+    }
 
-      &:hover {
-        //background-color: rgba(0, 0, 0, 0.02);
-        transform: none;
-
-        .portfolio-item__image {
-          transform: scale(0.99);
-        }
-        
-        .button__secondary {
-          background-color: rgba($accent-color-light, 0.2);
-        }
-        
-      }
-      
-      a {
+    // unfiltered items below, showing standard items
+    &__all{
+      .grid {
         display: flex;
-        align-items: flex-start;
-        gap: 10px;
-        align-self: stretch;
-        flex-direction: row;
-        height: 300px;      
-      }
-      
-      &__image{
-        flex: 1;
-        min-width: 0;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        transition: transform 0.2s ease;
+        flex-wrap: wrap;
+        gap: 2rem;
         
+        > * {
+          flex: 1 1 300px;
+          min-width: 300px;
+          max-width: 490px;
+        }
       }
-      
-      &__content {
-        flex: 0 0 auto;
-        width: 40%;
-        min-width: 330px;
-        background: none;        
-        position: relative;
-        border-radius: 0;
-        padding: $spacing-unit-2 $spacing-unit-1;
-        color: $text-color-dark;
-      }
-
-      h2{
-        font-size: $font-size-large;
-        color: $text-color-dark;
-      }
-
-      &__title {
-        font-size: $font-size-header-medium;
-        margin-bottom: 0.5rem;
-      }
-
-      &__client {
-        font-size: $font-size-medium;
-        color: $text-color-light;
-        font-weight: $font-weight-semibold;
-        margin-bottom: 0.5rem;
-      }
-
-      &__description {
+    } 
+    
+    // filtered items above
+    &__filtered{
+      .grid{
         display: block;
-        margin-bottom: 0.5rem;
-        font-size: $font-size-medium;      
       }
-
-      &__button{
-        margin-top: $spacing-unit-2;
-        display: block;
+  
+      .portfolio-item {
+        max-width: 100%;
+        box-shadow: none;
+        aspect-ratio: auto;
+  
+        &:hover {
+          //background-color: rgba(0, 0, 0, 0.02);
+          transform: none;
+  
+          .portfolio-item__image {
+            transform: scale(0.99);
+          }
+          
+          .button__secondary {
+            background-color: rgba($accent-color-light, 0.2);
+          }
+          
+        }
+        
+        &__layout-container {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          align-self: stretch;
+          flex-direction: row;
+          height: 260px;      
+        }
+        
+        &__image{
+          flex: 1;
+          min-width: 0;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          transition: transform 0.2s ease;
+          
+        }
+        
+        &__content {
+          flex: 0 0 auto;
+          width: 40%;
+          min-width: 330px;
+          background: none;        
+          position: relative;
+          border-radius: 0;
+          padding: $spacing-unit-2 $spacing-unit-1;
+          color: $text-color-dark;
+        }
+  
+        h3{
+          color: $text-color-dark;
+        }
+  
+        &__title {
+          font-size: $font-size-header-medium;
+          margin-bottom: 0.5rem;
+        }
+  
+        &__client {
+          color: $text-color-light;
+          margin-bottom: 0.5rem;
+        }
+  
+        &__description {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-size: $font-size-medium;      
+        }
+  
+        &__button{
+          margin-top: $spacing-unit-2;
+          display: block;
+        }
       }
     }
-  }
+  }   
 }
 
 // Components
@@ -416,7 +425,6 @@ hr {
   .footer-content {
     padding: $content-vpadding $content-hpadding;
     max-width: $content-width;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -504,9 +512,15 @@ hr {
     gap: $spacing-unit-2;
   }
 
+  // special styling for featured item image
   &__featured {
     .portfolio-item {
       max-width: 800px;
+      aspect-ratio: 1.62;
+      &__content{
+        width: auto;
+        max-width: 90%;
+      }
     }
   }
 
