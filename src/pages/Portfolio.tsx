@@ -150,7 +150,7 @@ const Portfolio: React.FC = () => {
   if (loading || !personal) {
     return (
       <div className="page-container">
-        <h2>Loading portfolio...</h2>
+        {/*<h2>Loading portfolio...</h2>*/}
       </div>
     );
   }

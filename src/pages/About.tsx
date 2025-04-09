@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import { usePersonalData } from '../hooks/usePersonalData';
 
 const About: React.FC = () => {
@@ -7,7 +8,7 @@ const About: React.FC = () => {
   if (!personal) {
     return (
       <div className="about page-container">
-        <h2>Loading...</h2>
+        {/*<h2>Loading...</h2>*/}
       </div>
     );
   }
@@ -22,29 +23,62 @@ const About: React.FC = () => {
   }
 
   return (
-    <div className="about page-container">
-      <h1>About Me</h1>
-      <div className="about__content">
-        <section className="about__intro">
-          <h2>{personal.descriptors.join(' · ')}</h2>
-          <p>{personal.bio}</p>
-        </section>
+    <div className="about page-container content-container">
+      <div className="about__header">
+        <div className="about__header-image">
+          <img src={personal.headshot} alt="Headshot" />
+        </div>
+        <div className="about__content">
+          <h1>About Me</h1>
+          <section className="about__intro">
+            <p>{personal.bio}</p>
+          </section>
 
-        <section className="about__contact">
-          <h2>Contact Information</h2>
-          <p>Email: <a href={`mailto:${personal.email}`}>{personal.email}</a></p>
-          <p>Phone: {personal.phone}</p>
-          <p>Location: {personal.location}</p>
-        </section>
-
-        <section className="about__social">
-          <h2>Connect With Me</h2>
-          <div className="about__social-links">
-            <a href={personal.social.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href={personal.social.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </section>
+          <section className="about__contact">
+            <h4>Connect with me</h4>
+            <div className="about__contact-links">
+              <p><a href={`mailto:${personal.contacts.email}`}>{personal.contacts.email}</a></p>
+              <p>{personal.contacts.phone}</p>
+              <p><a href={personal.contacts.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+              <p><a href={personal.contacts.github} target="_blank" rel="noopener noreferrer">GitHub</a></p>                 
+            </div>
+          </section>          
+        </div>
       </div>
+      
+      {personal["as a sections"].map((section, index) => (
+        <section key={index} className="about__section">
+          <h2><tspan className="smaller">as a </tspan>{section.title}</h2>
+          {section.text && <ReactMarkdown>{section.text}</ReactMarkdown>}
+          {section.images && section.images.length > 0 && (
+            <div className="about__image-grid">
+              {section.images.map((image, imageIndex) => (
+                <div key={imageIndex} className="about__image">
+                  <img src={image.src} alt={image.alt} />
+                  {image.caption && <p className="about__image-caption">{image.caption}</p>}
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
+      {personal["additional sections"].map((section,index) => (
+        <section key={index} className="about__section">
+          <h2>{section.title}</h2>
+          {section.text && <ReactMarkdown>{section.text}</ReactMarkdown>}
+          {section.images && section.images.length > 0 && (
+            <div className="about__image-grid">
+              {section.images.map((image, imageIndex) => (
+                <div key={imageIndex} className="about__image">
+                  <img src={image.src} alt={image.alt} />
+                  {image.caption && <p className="about__image-caption">{image.caption}</p>}
+                </div>
+              ))} 
+            </div>
+          )}
+        </section>
+      ))}
+              
     </div>
   );
 };

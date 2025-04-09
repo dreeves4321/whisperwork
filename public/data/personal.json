@@ -1,17 +1,132 @@
 {
     "name": "Daniel Reeves",
     "descriptors": ["Designer", "Builder", "Scientist"],
-    "email": "dreeves4321@gmail.com",
+    "headshot": "images/about/headshot.jpg",    
+    "contacts": {
+        "email": "dreeves4321@gmail.com",
+        "phone": "617.894.3265",
+        "github": "https://github.com/dreeves4321",
+        "linkedin": "www.linkedin.com/in/danielfreeves"
+    },
     "secondary contact":
     {
         "text": "LinkedIn",
         "url": "www.linkedin.com/in/danielfreeves"
     },
-    "location": "Watertown, MA",
-    "phone": "+1 (202) 444-1000",    
-    "social": {
-        "github": "https://github.com/dreeves4321",
-        "linkedin": "www.linkedin.com/in/danielfreeves"
-    },
-    "bio": "I'm a designer and builder of interactive experiences. I'm also a scientist. I'm currently the Director of Design at the All of Us Research Program, part of the National Institutes of Health."
+    "bio": "Hello! I'm a product designer, previously developer, previously scientist. I'm based in (and have always lived in) the Boston area. I'm currently looking for a position in software design or product development.",
+    "images": [
+        {
+            "src": "images/about/side1.jpeg",
+            "alt": "Side view of a wooden cabinet showing its construction details",
+            "caption": "Handcrafted cabinet with dovetail joints and custom hardware"
+        },
+        {
+            "src": "images/about/side2.jpeg",
+            "alt": "Another angle of the wooden cabinet showing its finish",
+            "caption": "Natural wood finish highlighting the grain pattern"
+        },
+        {
+            "src": "images/about/table.jpeg",
+            "alt": "Custom built wooden table with unique design",
+            "caption": "Dining table with integrated storage and modern design"
+        },
+        {
+            "src": "images/about/trunk.jpeg",
+            "alt": "Vintage style wooden trunk with metal hardware",
+            "caption": "Restored antique trunk with custom interior"
+        },
+        {
+            "src": "images/about/rack1.jpeg",
+            "alt": "Wall-mounted wooden rack for storage",
+            "caption": "Custom wall rack with adjustable shelves"
+        },
+        {
+            "src": "images/about/boards.jpeg",
+            "alt": "Collection of wooden cutting boards",
+            "caption": "Handmade cutting boards with various wood types"
+        },
+        {
+            "src": "images/about/rack2.jpeg",
+            "alt": "Another view of the wall-mounted storage rack",
+            "caption": "Storage rack with integrated lighting"
+        },
+        {
+            "src": "images/about/lego.jpeg",
+            "alt": "Lego model of a complex structure",
+            "caption": "Custom Lego model showcasing design skills"
+        }
+    ],
+    "as a sections":[
+        {
+            "title": "Designer",
+            "text": "I'm a product designer for software teams. I excel at bringing a structured and analytical approach, honed through my Ph.D. training, to bear on complex problems to find intuitive solutions and communicate them clearly to diverse audiences. I listen, think, and always advocate for the user."
+        },
+        {
+            "title": "Scientist",
+            "text": "Through my dissertation and two post-docs, I brought multiple disciplines and points of view together to understand problems at many scales. One common thread, shared across contexts of biology, chemistry, and geophysics, was building an understanding of how molecules interact in crowded environments. For publication list, visit https://www.researchgate.net/profile/Daniel-Reeves-2."
+        },
+        {
+            "title": "Hobbyist",
+            "text": "I enjoy building woodworking and gardening. I like coaxing beautiful shapes and textures from the raw natural materials of wood and soil.",
+            "images":[
+                {
+                    "src": "images/about/side1.jpeg",
+                    "alt": "Handcrafted wooden side table",
+                    "caption": "Wooden side table of maple, pine, and walnut."
+                },
+                {
+                    "src": "images/about/side2.jpeg",
+                    "alt": "Matching wooden side table",
+                    "caption": "Matching side table."
+                },
+                {
+                    "src": "images/about/table.jpeg",
+                    "alt": "Robust wooden coffee table",
+                    "caption": "Coffee table of maple and cherry. Danish oil finish."
+                },
+                {
+                    "src": "images/about/trunk.jpeg",
+                    "alt": "Vintage style wooden trunk with metal hardware",
+                    "caption": "Wooden toy trunk built as a gift for my daughter. Poplar and hardwood ply with gel stain."
+                },
+                {
+                    "src": "images/about/rack1.jpeg",
+                    "alt": "Wine cabinet",
+                    "caption": "Wine cabinet with glass storage (v2). Maple and pine."
+                },              
+                {
+                    "src": "images/about/rack2.jpeg",
+                    "alt": "Another view of the wall-mounted storage rack",
+                    "caption": "Wine cabinet with glass storage (v1). Pine."
+                },
+                {
+                    "src": "images/about/boards.jpeg",
+                    "alt": "Collection of wooden cutting boards",
+                    "caption": "Handmade wedding gift cutting boards. Maple and walnut."
+                },
+                {
+                    "src": "images/about/lego.jpeg",
+                    "alt": "Lego table and book case.",
+                    "caption": "Lego work table and book case."
+                }
+            ]
+        }
+    ],
+    "additional sections":[
+        {
+            "title": "About this logo",
+            "text": "An evolution of a logotype.\n\n Elegant and simple.\n\n Evocative of math, architecture, and tools.",
+            "images":[
+                {
+                    "src": "images/about/logo.jpg",
+                    "alt": "Logo design showing geometric shapes",
+                    "caption": "Logo evolution showing geometric progression"
+                }
+            ]
+        },
+        {
+            "title": "About this portfolio",
+            "text": "The code for this website is available on GitHub as the open-source platform WhisperWork. I built it to be easy to use for non coders, and easy to update and customize, as it is completely configurable from json files."
+        }
+    ]
 }

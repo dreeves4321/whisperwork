@@ -49,6 +49,7 @@ const ThreadFilter: React.FC<ThreadFilterProps> = ({
               }`}
               onClick={() => onThreadSelect(thread.id)}
             >
+              <img src={`${process.env.PUBLIC_URL}/icons/star.svg`} alt=""  />
               {thread.name}
             </button>
           ))}

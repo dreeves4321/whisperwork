@@ -24,7 +24,7 @@ const App: React.FC = () => {
         <footer className="footer">
           <div className="footer-content">
             <p>
-              contact: <b><a href={`mailto:${personal?.email}`} target="_blank" rel="noopener noreferrer">{personal?.email}</a></b>
+              contact: <b><a href={`mailto:${personal?.contacts?.email}`} target="_blank" rel="noopener noreferrer">{personal?.contacts?.email}</a></b>
               {' // '}
             <b><a href={personal?.["secondary contact"]?.url} target="_blank" rel="noopener noreferrer">{personal?.["secondary contact"]?.text}</a></b>
           </p>

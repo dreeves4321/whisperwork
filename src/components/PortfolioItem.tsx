@@ -16,10 +16,10 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ item, onGalleryClick }) =
         className="portfolio-item__image"
       />
       <div className="portfolio-item__content">
-        <h3 className="portfolio-item__title">{item.title}</h3>
         {item.client && <p className="portfolio-item__client">{item.client}</p>}
+        <h3 className="portfolio-item__title">{item.title}</h3>
         {item.description && <p className="portfolio-item__description">{item.description}</p>}
-        <div className="button__secondary portfolio-item__button">Read the case study</div>
+        <div className="button__secondary portfolio-item__button">Read more</div>
       </div>
 
     </div>

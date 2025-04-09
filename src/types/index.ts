@@ -75,16 +75,34 @@ export type ContentBlock =
 export interface Personal {
   name: string;
   descriptors: string[];
-  bio: string;
-  email: string;
-  phone: string;
-  location: string;
+  headshot: string;
+  contacts: {
+    email: string;
+    phone: string;
+    linkedin: string;
+    github: string;
+  };
   "secondary contact": {
     text: string;
     url: string;
   };
-  social: {
-    linkedin: string;
-    github: string;
-  };
+  bio: string;
+  "as a sections": Array<{
+    title: string;
+    text: string;
+    images?: Array<{
+      src: string;
+      alt: string;
+      caption: string;
+    }>;
+  }>;
+  "additional sections": Array<{
+    title: string;
+    text: string;
+    images?: Array<{
+      src: string;
+      alt: string;
+      caption: string;
+    }>;
+  }>;
 } 

@@ -40,7 +40,7 @@ $spacing-unit-6: calc(6 * $spacing-unit-1);
 // main layout
 $content-width: 1050px;
 $content-hpadding: $spacing-unit-5;
-$content-vpadding: $spacing-unit-4;
+$content-vpadding: $spacing-unit-3;
 
 // Breakpoints 
 $tablet: 900px;
@@ -56,6 +56,7 @@ $mobile: 500px;
 // Import component styles
 @import 'components/modal';
 @import 'components/CaseStudy';
+@import 'components/About';
 
 // Base styles
 * {
@@ -88,19 +89,19 @@ h1, h2, h3{
 
 h1 {
   font-size: $font-size-header-xlarge;
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-normal;
   line-height: 125%;
 }
 
 h2 {
   font-size: $font-size-header-large;
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-normal;
   line-height: 125%;
 }
 
 h3 {
   font-size: $font-size-header-medium;
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-normal;
   line-height: 125%;
 }
 
@@ -172,14 +173,19 @@ hr {
 
 // Pages
 .portfolio{
+  // Personal info
+  .personal-info {
+    padding-top: 0;
+    margin-bottom: $spacing-unit-6;
+  }
+  
   // Portfolio items (basic square)
   .portfolio-item {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1.62;
     border-radius: 10px;
     background-color: $surface-color-light;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.11);
     transition: transform 0.2s ease;
 
     p {
@@ -202,15 +208,14 @@ hr {
     }
 
     &__content {
-      padding: 1rem;
+      padding: $spacing-unit-1 $spacing-unit-2;
       position: absolute;
-      border-top-left-radius: 10px;
       bottom: 0;
       right: 0;
       width: 100%;
       background-color: $surface-color-shader;
-      color: $text-color-contrast;
-      max-height: 66%;
+      color: $text-color-contrast;      
+      //min-height: 80px;
     }
 
     h3 {
@@ -218,12 +223,11 @@ hr {
     }
 
     &__title {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
     }
 
     &__client {
       color: $text-color-contrast;
-      font-weight: $font-weight-semibold;
     }
 
     &__description {
@@ -236,7 +240,8 @@ hr {
   }
 
   .portfolio-section{
-    margin-bottom: $spacing-unit-4;
+    margin-bottom: $spacing-unit-6;
+    margin-top: $spacing-unit-6;
     
     &__title{
       margin-bottom: $spacing-unit-2;
@@ -252,12 +257,13 @@ hr {
       .grid {
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: $spacing-unit-1;
         
         > * {
           flex: 1 1 300px;
           min-width: 300px;
-          max-width: 490px;
+          max-width: 500px;
+          height: 270px;
         }
       }
     } 
@@ -272,7 +278,8 @@ hr {
         max-width: 100%;
         box-shadow: none;
         aspect-ratio: auto;
-  
+        margin-bottom: $spacing-unit-2;
+
         &:hover {
           //background-color: rgba(0, 0, 0, 0.02);
           transform: none;
@@ -302,7 +309,7 @@ hr {
           height: 100%;
           object-fit: cover;
           border-radius: 10px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.11);
           transition: transform 0.2s ease;
           
         }
@@ -349,13 +356,16 @@ hr {
 
 // Components
 .nav {
-  padding: 8px $content-hpadding 8px $content-hpadding;
+  padding: 8px 0 8px 0;
   background-color: $surface-color-mid;
   width: 100%;
   top: 0;
   z-index: 1000;
 
   &__container {
+    max-width: $content-width;
+    margin: 0 auto; 
+    padding: 0 $content-hpadding;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -429,6 +439,7 @@ hr {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
   }
   
   p {
@@ -437,10 +448,7 @@ hr {
 
 }
 
-// Personal info
-.personal-info {
-  padding-top: 0;
-}
+
 
 // Threads filter
 .thread-filter {
@@ -472,35 +480,54 @@ hr {
   }
 
   &__button {
-    padding: 0.75rem 1.5rem;
-    margin-left: -1.5rem;
+    padding: 0.5rem $content-hpadding;
+    margin-left: calc(-1 * $content-hpadding);
     border: 1px solid transparent;
     border-radius: 4px;
     background: none;
     cursor: pointer;
-    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     text-align: left;
+    
     color: $text-color-dark;
     font-size: $font-size-header-medium;
-    font-weight: $font-weight-normal;
-    font-family: $font-family-serif;
+    font-weight: $font-weight-light;
+    font-family: $font-family-sans-serif;
+    letter-spacing: .2px;
     box-sizing: border-box;
+    position: relative;
+    
+    img{
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: calc(0.5 * $content-hpadding - 8px);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
 
     &:hover:not(.thread-filter__button--active) {
-      background-color: rgba($accent-color-light, 0.2);
+      background-color: rgba($accent-color-light, 0.11);
     }
     
     &:focus:not(.thread-filter__button--active) {
-      background-color: rgba($accent-color-light, 0.2);
+      background-color: rgba($accent-color-light, 0.11);
     }
 
     &--active {
-      background-color: rgba($accent-color-light, 0.4);
+      background-color: rgba($accent-color-light, 0.07);
       color: $accent-color-dark;
       font-weight: $font-weight-semibold;
+      letter-spacing: 0;
+
+      img{
+        opacity: 1;
+      }
 
       &:hover {
-        background-color: rgba($accent-color-light, 0.6);
+        background-color: rgba($accent-color-light, 0.11);
       }
     }
   }
@@ -520,11 +547,12 @@ hr {
       &__content{
         width: auto;
         max-width: 90%;
+        border-top-left-radius: 10px;
       }
     }
   }
 
-  @media (max-width: $tablet) {
+  @media (max-width: $mobile) {
     flex-direction: column;
 
     &__buttons {
