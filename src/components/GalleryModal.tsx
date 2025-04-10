@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { GalleryItem } from '../types';
 import '../styles/main.scss';
 
@@ -8,12 +9,23 @@ interface GalleryModalProps {
 }
 
 const GalleryModal: React.FC<GalleryModalProps> = ({ item, onClose }) => {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
   useEffect(() => {
     document.body.classList.add('modal-open');
     return () => {
       document.body.classList.remove('modal-open');
     };
   }, []);
+
+  const handleGridItemClick = (index: number) => {
+    setSelectedImage(index);
+  };
+
+  const handleImageClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setSelectedImage(null);
+  };
 
   return (
     <div className="modal" onClick={onClose}>
@@ -22,15 +34,29 @@ const GalleryModal: React.FC<GalleryModalProps> = ({ item, onClose }) => {
             <img src={`${process.env.PUBLIC_URL}/icons/close.svg`} alt="Close" />
         </button>
         <div className="modal__window" onClick={e => e.stopPropagation()}>
-          
           <div className="modal__content">
-            <div className="modal__hero">
-              <img               
-                src={`${process.env.PUBLIC_URL}/images/${item.images[0].src}`}
-                alt={item.images[0].caption}
-                className="modal__hero-image"
-              />
-            </div>
+            {selectedImage !== null ? (
+              <div className="modal__fullscreen-image" onClick={handleImageClick}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/${item.images[selectedImage + 1].src}`}
+                  alt={item.images[selectedImage + 1].caption}
+                  className="modal__fullscreen-image-content"
+                />
+                {item.images[selectedImage + 1].caption && (
+                  <div className="modal__fullscreen-caption">
+                    {item.images[selectedImage + 1].caption}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="modal__hero">
+                <img               
+                  src={`${process.env.PUBLIC_URL}/images/${item.images[0].src}`}
+                  alt={item.images[0].caption}
+                  className="modal__hero-image"
+                />
+              </div>
+            )}
             <div className="modal__content-section">
               <div className="modal__meta">
                 <span>{item.client}</span>
@@ -38,16 +64,30 @@ const GalleryModal: React.FC<GalleryModalProps> = ({ item, onClose }) => {
                 <span>{item.date}</span>
               </div>
               <h2 className="modal__title">{item.title}</h2>
-              <p className="modal__description">{item.description}</p>
+              <div className="modal__description"><ReactMarkdown>{item.description}</ReactMarkdown></div>
+              {item.link && (
+                <a 
+                  href={item.link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal__button button__primary"
+                >
+                  {item.link.text}
+                </a>
+              )}
               <div className="modal__grid">
                 {item.images.slice(1).map((image, index) => (
-                  <div key={index} className="modal__grid-item">
+                  <div 
+                    key={index} 
+                    className="modal__grid-item"
+                    onClick={() => handleGridItemClick(index)}
+                  >
                     <img 
                       src={`${process.env.PUBLIC_URL}/images/${image.src}`}
                       alt={image.caption}
                       className="modal__grid-image"
                     />
-                    <div className="modal__grid-caption">{image.caption}</div>
+                    {image.caption && <div className="modal__grid-caption">{image.caption}</div>}
                   </div>
                 ))}
               </div>

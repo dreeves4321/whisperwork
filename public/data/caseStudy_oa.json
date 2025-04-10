@@ -1,0 +1,21 @@
+{
+    "title": "Faster approval, Better Outcomes: Rethinking Prior Authoriazation for Cancer Care",
+    "client": "",
+    "problem": "The home health industry needs compelling digital services for nursing care and administration. Larger EHR products are monstrously expensive (for a smaller-margin domain such as home care), and more importantly, don’t cater to the nursing needs in the field and at home.",
+    "solution": "Design and ship a clinically relevant and rules-compliant health record system that’s straightforward to use on the go and in the office.",
+    "results": "The final output is a real, working EHR service with patient and employee scheduling, billing, payroll, nursing notes, consent with digital signatures, patient profiles, and quality assurance. These elements, presented in an approachable and easily learnable user experience, are essential for efficient patient management in home healthcare settings.",
+    "commitment": "Team of 2 designer/engineers over 6 months. I was involved with all elements of product design.",
+    "heroImage": "maya-1.jpg",
+    "contentBlocks": [
+	    {
+	        "type": "section",
+	        "text": "Overview"
+	    },
+	    {
+	        "type": "body",
+	        "text": "**Home health is growing. And it's challenging.** /n/n The home healthcare sector is expected to witness a 20% growth in employment over the next decade, driven by demographic shifts, technological advancements, and a growing emphasis on patient-centric and value-based care. Home health agencies play a pivotal role in delivering medical care directly to homebound patients./n/n Home health agencies face many challenges. Workforce shortages pose a significant hurdle as demand outpaces the availability of skilled healthcare professionals. Navigating regulatory complexities and addressing reimbursement issues require cohesive and adaptable workflows. Additionally, maintaining clear communication among staff and upholding elevated standards of care pose challenges within the decentralized context of home care./n/n Texas-based Maya Healthcare approached GoInvo to design a digital platform that can support and empower agencies through these challenges. They need software that fills a unique spectrum of capabilities: part traditional EHR, part fleet management system, part content management system."
+	    },
+	    {
+	    }
+	]			
+}

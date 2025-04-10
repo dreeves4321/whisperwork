@@ -14,24 +14,23 @@ const Navigation: React.FC = () => {
             className="nav__logo-icon"
           />
         </Link>
-        <ul className="nav__links">
-          <li>
+        <div className="nav__links">
+          
             <Link 
               to="/" 
               className={location.pathname === '/' ? 'active' : ''}
             >
               Work
             </Link>
-          </li>
-          <li>
+          
+          
             <Link 
               to="/about" 
               className={location.pathname === '/about' ? 'active' : ''}
             >
               About Me
             </Link>
-          </li>
-        </ul>
+        </div>
       </div>
     </nav>
   );

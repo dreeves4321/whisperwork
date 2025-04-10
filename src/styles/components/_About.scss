@@ -1,5 +1,16 @@
 .about {
     
+  a {
+    color: $accent-color-dark;
+    font-weight: $font-weight-semibold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  
+    &:hover {
+      color: darken($accent-color-dark, 10%);
+      text-decoration: underline;
+    }
+  }
 
    &__header {
     display: flex;

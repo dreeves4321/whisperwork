@@ -14,16 +14,24 @@ export interface WorkItem {
   thumbnail: string;
   date: string;
   client: string;
+  flags: string[];
 }
 
 export interface GalleryImage {
   src: string;
-  caption: string;
+  caption?: string;
+  alt?: string;
+}
+
+export interface GalleryLink {
+  text: string;
+  url: string;
 }
 
 export interface GalleryItem extends WorkItem {
   type: 'gallery';
   images: GalleryImage[];
+  link: GalleryLink;
 }
 
 export interface CaseStudy extends WorkItem {
@@ -38,7 +46,7 @@ export interface CaseStudy extends WorkItem {
 
 // Base interface with common fields
 interface BaseContentBlock {
-  type: 'section' | 'body' | 'image' | 'quote' | 'button';
+  type: 'section' | 'body' | 'image' | 'quote' | 'button' | 'video';
 }
 
 // Specific interfaces for each type
@@ -65,12 +73,20 @@ interface ButtonContentBlock extends BaseContentBlock {
   url: string;  // required for buttons
 }
 
+interface VideoContentBlock extends BaseContentBlock {
+  type: 'video';
+  src: string;
+  preview: string;
+  text?: string;
+}
+
 // Union type combining all content block types
 export type ContentBlock = 
   | TextContentBlock 
   | ImageContentBlock 
   | QuoteContentBlock 
-  | ButtonContentBlock;
+  | ButtonContentBlock
+  | VideoContentBlock;
 
 export interface Personal {
   name: string;

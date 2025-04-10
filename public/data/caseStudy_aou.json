@@ -1,10 +1,10 @@
 {
-  "title": "AoU",
+  "title": "Designing Digital Experiences for Participants in a National Health Research Program",
   "client": "NIH",
-  "problem": "Problem text",
-  "solution": "solution text",
-  "results": "results text",
-  "commitment": "commitment text",
+  "problem": "Medical research has a diversity problem. 90% of the U.S. patient population1 aren’t involved in research and don’t want to think about their health — until they have to (Ma et al., Minority Representation in Clinical Trials in the United States, 2021). The *All of Us Research Program* aims to enroll 1 million participants to deliver the most diverse medical research database. The program required design focused on the participant experience to enroll and retain the number of participants to achieve their goal. Our team at GoInvo, with experience and expertise in health design for humans and shipping research software, brought this focus to the foreground.",
+  "solution": "GoInvo led product design as part of the Participants Technology Systems Center (PTSC) for the *All of Us* participant portal on behalf of Vibrent Health from 2020 through 2024. We worked with a consortium of stakeholders to facilitate the development of program initiatives and strategies that become participant experiences.GoInvo supported and designed a digital experience to:\n\n - Provide health surveys and returns of results so that participants from all walks of life can understand.\n - Onboard new participants into the All of Us Research Program.\n - Help participants consent to join and contribute health data to science. \n - Show how participation matters to the nation and the lives of all patient.",
+  "results": "Through program-wide design, UX leadership, guidance, and coordination between research groups, program offices, and technology delivery teams, our team has helped to:\n\n -  Deliver experiences for participants to contribute more health information through surveys and sharing biosamples.\n - Provide engaging insights to share with participants what the program is learning from their contributions.\n - Make accessible pathways to encourage more participants to join the All of Us Research Program. \n - Reach 700,000+ enrolled participants and growing.",
+  "commitment": "Team of 2-4 designers over 3 years. I was involved for 2+ years, and led and managed multiple initiatives from concept to delivery.",
   "heroImage": "aou-1.jpg",
   "contentBlocks": [
     {
@@ -13,12 +13,68 @@
     },
     {
       "type": "body",
-      "text": "stuff stuff stuff"
+      "text": "The *All of Us Research Program*, run by the National Institutes of Health (NIH), is a nationwide health study that aims to collect health data from a diverse group of 1 million or more people living in the United States. The program aims to run for 10 years or more, providing this diverse dataset longitudinally. Every human is unique, with different genes, lifestyles, and living conditions, and circumstances that change over time. The more researchers can learn about what affects people’s health, the better they will be able to drive research that impacts more humans. \n\n The program is an ambitious government-funded health research effort with the goal to retain and engage participants long-term. More than a hundred funded partner organizations work together to run the *All of Us Research Program*. GoInvo was brought in as a small task force, working as the design team for the PTSC under Vibrent Health to support the digital experience in the PTSC Participant Portal."
     },
     {
       "type": "image",
-      "src": "aou-1.jpg",
+      "src": "aou-2.jpg",
       "text": "caption text"
+    },
+    {
+      "type": "body",
+      "text": "Participants who join contribute through answering surveys, providing biosamples, sharing electronic health records (EHRs), and more. The program maintains their information and provides de-identified data to researchers. Participants can access the online portal to stay connected with the program and receive results demonstrating the impact of their contributions to the program. PTSC's focus was to provide a digital platform to support participation by delivering surveys, communications, and returns of results. GoInvo facilitated this by focusing on participant's perspectives and needs."
+    },
+    {
+      "type": "section",
+      "text": "The Process"
+    },
+    {
+      "type": "body",
+      "text": "GoInvo's day-to-day operations varied to adapt to program priorities, encompassing diverse roles that involved design, project management, user experience expertise, product validation (QA), and collaborative engagement with program consortium stakeholders. \n\n ### We dove deep to understand the program and the platform. \n\n - Live the problem (enroll and participate in the program). \n - See the problem (work directly with participants, researchers, policy, and engineering). \n - Design shippable solutions (understand and build around program and technical constraints). \n - Live the solution (embed ourselves across teams). \n\n **We lived the experience with a deep dive audit of the participant experience.** \n\n We conducted a system-wide review of the participant portal and user feedback to better understand the participant experience. From creating an account, completing consents, answering surveys, we dug into every detail and corner of the portal and developed recommendations along the way. We enrolled, became official participants in the All of Us Research Program and learned first hand what an experience of the participant journey could be like, with an understanding that there would be variation under different sets of circumstances. \n\n  **Got to know the platform (behind the scenes).** \n\n Based on our expert review, we proposed improvements that would benefit the overall user experience. The recommendations ranged from user interface enhancements such as styling, consistency of interactions, content voice, readability, comprehension, information hierarchy and architecture, and more. In the process, we learned that engineering and policy constraints and operations could be complex and challenging, impacting the feasibility for what could be considered a simple change, like button color. The reality of designing for a national research program is that prioritization and scope of work depend upon funding decisions, and we learned how to design and strategize within that constraint. \n\n  **Delivered shippable designs for program initiatives.** \n\n We worked closely with Vibrent Health’s program and technical teams to support design tasks for All of Us, allowing us to learn how the teams implement, develop, and maintain the program and portal — what’s possible and what’s not. Knowing how the portal delivers experiences to participants, its capabilities and constraints, is crucial when delivering user-friendly and accessible designs that are possible to implement with the resources and timelines provided."
+    },
+    {
+      "type": "image",
+      "src": "aou-3.jpg"      
+    },
+    {
+      "type": "body",
+      "text": "**We established design and illustration libraries and created reusable UI components.** \n\n We compiled a design library and usability patterns based on the existing portal styles. Collaborating with the NIH program and design teams, we developed guidelines to establish and document standards for program-wide visuals. These reusable components and and style guides allowed program design teams to design and build prototypes quickly with consistency. As we continued to design new activities for participants in the portal, we adjusted and expanded this guide as needs came up and recommendations were organized among other priorities."
+    },
+    {
+      "type": "image",
+      "src": "aou-4.jpg"     
+    },
+    {
+      "type": "body",
+      "text": "### More than a design team. \n\n Over the course of our work, we touched on projects ranging from small (like a catch up survey to a few thousand participants) to large (like how we deliver genomic results). Because we worked on with teams across the entire program, our team grew our knowledge of how the program worked that few program teams had. We not only built a library of design patterns and prototypes, but we also built a library of requirements and documentation. \n\n Our role became more than creating and delivering designs. We communicated often non-visual design via requirements lists and specifications, partly for documentation, but also to help drive conversations. While we did often spend a lot of time on pixels and prototyping, we also supplied the larger experience, which often includes gritty details of invisible product design. \n\n We helped to glue conversations and pieces of the experience together, and communicated the overall user experience across different teams, especially in conversations between NIH and Vibrent Health. We became the go-to team to answer most questions about how the program or experience worked. \n\n **Balanced usability, technical, and program needs.** \n\n When launching a new activity for participants, GoInvo worked closely with the NIH program and UX strategy teams to understand the initiative goals– what we are asking participants to do, and what participants need in return. This process includes collaborating with NIH UX on the overall strategy, making recommendations, and helping to define and solidify requirements and priorities. \n\n Based on the accepted requirements and recommendations, our team developed designs that considered not only the best user experience but also data collection completeness, accessibility to participants who are underrepresented in biomedical research (UBR), implementation timeline and resources, and transparency. \n\n Launching a new activity, like a survey, to the participant portal can take several months and up to a year or more. Each survey has to go through the program’s institutional review board (IRB) and various NIH leadership approvals. Stakeholders, including researchers, scientists, product owners, UX strategists, designers, and developers, work together on requirements, communication strategies, designs, and more. Once the protocol has been approved, with design and technical strategy set, the activity will go to implementation. We will then review the flow in a testing environment and conduct product validation and debugging before launching to public participants. \n\n Throughout the process, our role as user experience designers is to advocate for participants and support the best experience while balancing usability against program policy, product constraints, and implementation. \n\n **Developed strategy for returning results of portal activities.** \n\n The program aims to provide meaningful value to participants by providing returns of results based on their contributions through activities like providing biosamples and completing surveys. Through user interviews, iterations of design, and participant feedback, we found that participants were looking for more context and substance than the program was able to provide. This called for creative solutions to deliver feasible methods of applying meaning, context, and value to participant returns of results. \n\n GoInvo developed content guidelines, design guidelines, and a process to help teams deliver returns of results that participants will find valuable. Along with a technical strategy that the PTSC developed, the HTML-based return of results frees the development from the technical constraints common to other parts of the portal."
+    },
+    {
+      "type": "image",
+      "src": "aou-5.jpg"
+    },
+    {
+      "type": "body",
+      "text": "### Proposed program design \n\n Our team designed many concepts, some of which didn’t make it into the experience. We wanted to show what the program *could* be capable of and give stakeholders ideas to share and grow within the program. Some of these proposals: \n\n - Deliver a focused home page that highlights the next activity for the participant to complete. \n - Provide more research context throughout the participant journey, including personalizing research returns on the data they provided. \n - Offer forms that are clearer and faster to complete. \n - Track biosample kits from collection to biobank and DNA processing. \n - Driving participation through tangible rewards. \n - Engage participants through low effort activities that collect participant life data for longterm collection \n - A new information architecture and workflow that directs participants to the  next activity and brings focus to new relevant informaiton and opportunities."
+    },
+    {
+      "type": "image",
+      "src": "aou-6.jpg"
+    },
+    {
+      "type": "section",
+      "text": "Takeaways"
+    },
+    {
+      "type": "body",
+      "text": "### The future of medical research engages participants \n\n If medical research programs aim to prioritize participant enrollment and retention, a digital experience for participants should:\n\n - Provide participants with more transparency and agency around the data they provide for research. \n -  Acknowledge participant contribution with choice-focused return of value framework to encourage participation and involvement in the program community. \n -  Provide participants with more connections to research using program data. \n -   Personalize the participant journey and research returns based on the data they provide. \n -  Support participant decision-making for difficult topics while reducing condescension or coercion in messaging. \n -  Prioritize optimal data collection for ease of use, readability, and comprehension, which will also support providing quality, clean data for researchers to use. \n\n ### National research projects pose unique challenges \n\n **Participants come from diverse backgrounds and have different needs.** Understanding participants is critical to designing for a flexible program that addresses varied circumstances and meets participants where they are. \n\n **Different teams have different backgrounds, priorities, and responsibilities.** Program goals, technical constraints, policy requirements, and participant needs are not always aligned. As designers, we must lean on design approaches and champion their impact on the user experience. We needed to drive conversations by showing designs to support informed decision-making with the program that highlight what is best for the participant. And sometimes, we must be ready to swiftly develop alternative solutions across barriers.\n\n **Program decisions are sometimes made prematurely, without fully considering implementation and user experience consequences.** We learned to push our way into projects earlier and get involved with the smaller decision-making teams. We advocated for the participant user experience and crafted flexible solutions that accommodate less-than-ideal situations.\n\n **Different teams and situations call for different methods of design and communication.** Visual designs couldn’t support all conversations. It’s important to identify the right kind of delivery and level of detail, whether documentation, specs, requirements, or a bullet list.\n\n"
+    },
+    {
+      "type": "section",
+      "text": "Results"
+    },
+    {
+      "type": "body",
+      "text": "Impacting 750k registered participants through program-wide design, UX leadership, guidance, and coordination between research groups and program offices, our team at GoInvo helped to: \n\n -  Deliver new and improved experiences for participants to contribute health data through surveys, digital health connections, and biosample donation. \n -  Provide engaging insights to share with participants what the program is learning from their contributions. \n -   Guide design and recommend during initiative conception and requirements. \n -  Developed a visual asset and illustration library and standard that is used across the program for digital and print materials. \n - Provide support on implementation and development."
     }
   ]
 }

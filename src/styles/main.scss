@@ -113,18 +113,6 @@ h4 {
   line-height: 125%;
 }
 
-
-
-a {
-  color: $accent-color-dark;
-  text-decoration: none;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: darken($accent-color-dark, 10%);
-  }
-}
-
 hr {
   margin: $spacing-unit-2 0;
   border: 0;
@@ -132,6 +120,26 @@ hr {
   background-color: $surface-color-line;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul{
+  margin: $spacing-unit-1 0;
+  list-style-position: outside;
+  padding-left: 1rem;
+  
+}
+li {
+  list-style-type: disc;
+  margin-top: 2px;
+  padding-left: 0.5rem;
+  
+  &::marker {
+      font-size: 0.8em; /* Adjust the size as needed */
+      color: $text-color-accent;
+    }
+}
 
 // Layouts
 
@@ -157,6 +165,24 @@ hr {
   font-weight: $font-weight-semibold;
   text-align: center;
   transition: background-color 0.2s ease, color 0.2s ease;
+  
+  &:focus{
+    outline: 1 solid $accent-color-dark;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  &__primary{
+    @extend .button;
+    background-color: $accent-color-mid;
+    color: $text-color-contrast;
+        
+    &:hover {
+      background-color: $accent-color-dark
+    }
+  }
 
   &__secondary{
     @extend .button;
@@ -261,7 +287,7 @@ hr {
         
         > * {
           flex: 1 1 300px;
-          min-width: 300px;
+          min-width: 320px;
           max-width: 500px;
           height: 270px;
         }
@@ -399,8 +425,7 @@ hr {
   &__links {
     display: flex;
     gap: 2rem;
-    list-style: none;
-
+    
     a {
       font-size: $font-size-medium;
       letter-spacing: calc(0.01 * $font-size-medium);

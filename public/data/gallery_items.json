@@ -2,18 +2,14 @@
   {
     "id": "build-a-lamp",
     "title": "Build-a-Lamp",
-    "description": "An interactive installation allowing museum visitors to design and illuminate their own Tiffany lamp creation.",
-    "type": "gallery",
-    "threads": [
-      "interactive-experiences"
-    ],
-    "thumbnail": "build-a-lamp-1.jpg",
+    "description": "An interactive installation allowing museum visitors to design and illuminate their own Tiffany lamp creation.",    
     "client": "New-York Historical Society",
-    "date": "2022",
+    "date": "2016",
     "images": [
       {
         "src": "build-a-lamp-1.jpg",
-        "caption": "The New-York Historical Society's Tiffany Gallery showcases the society's exceptional collection of decorative glass lamps designed and crafted by the Tiffany Studios."
+        "caption": "The New-York Historical Society's Tiffany Gallery showcases the society's exceptional collection of decorative glass lamps designed and crafted by the Tiffany Studios.",
+        "alt": "A Tiffany style lampshade on a black table, illuminated from within."
       },
       {
         "src": "build-a-lamp-2.jpg",
@@ -21,8 +17,111 @@
       },
       {
         "src": "build-a-lamp-3.jpg",
-        "caption": "Visitors can experiment with different lamp designs and see their creations come to life."
+        "caption": "Hundreds of individually addressable LEDs are anchored to the inside of the lamp on a 3D printed armature.",
+        "alt": "The inside of the lamp, exposing a nest of wires and LEDs."
       }
     ]
+  },
+  {
+    "id": "flux",
+    "title": "Flux Notes — Health Data Capture at the Point of Care",
+    "description":"Providers rarely capture high-quality, standardized oncological data, leading to 97% of cancer patients having fractured, uncoordinated, and poor-quality data. Research and development of new treatments in oncology hinge on high-quality data, and providers rely on structured information to quickly assess a patient and provide timely, proper care. \n\nAt GoInvo, I worked with a team at MITRE Corporation to design Flux Notes, a web application that captures structured health data at the point of care. Built on top of the oncology subset of the Standard Health Record (SHR) developed jointly by the American Society of Clinical Oncology (ASCO) and the MITRE Corporation, Flux Notes showcases both the value of SHR in raising the quality of data and opportunities in medical record interfaces to promote better care. \n\nFlux Notes demonstrates an innovative method of capturing high fidelity structured health data while presenting it in a human-readable format. We focused on: \n - Capturing structured data while note taking, \n - Simplifying the interface for data capture, \n - Exploring and annotating the record using natural interactions, and \n - Using visuals to convey clinical insights and histories.",
+    "client": "The MITRE Corporation",
+    "date": "2019",
+    "images": [
+      {
+        "src": "fluxnotes-1.jpg",
+        "caption": "",
+        "alt":""      
+      }
+    ]    
+  },
+  {
+    "id": "codametrix",
+    "title": "Automating Medical Coding",
+    "description":"We partnered with CodaMetrix to design client-facing dashboards for healthcare coding departments using their AI-powered medical coding platform. Through interviews, we learned clients' main challenge was finding clear, easy-to-understand information about how the automated coding was working and its impact. Our designs focused on creating beautiful and simple data visuals that showed important information exactly when and where users needed it. \n\n The resulting dashboards and management tools gave coding managers a clear view of their coding pipelines. They could easily see how much coding was done by AI versus people and the money saved. The design also showed how the AI performed for different types of treatments and flagged any difficult cases for review. Users could look at these cases to understand why the AI made certain coding choices and correct them if needed. The dashboards also tracked performance over time and compared the AI's coding to manual coding, helping to improve the AI. Our comprehensive design included a full guide for the look and feel of the dashboards to keep everything consistent and easy to use. \n\n This empowered health system coding departments with the straightforward information they needed to understand, manage, and improve their use of CodaMetrix's automated coding, ultimately helping their billing processes.",
+    "client": "CodaMetrix",
+    "date": "2018/2020",
+    "images": [
+      {
+        "src": "codametrix-1.jpg",
+        "caption": ""
+      },
+      {
+        "src": "codametrix-2.jpg",
+        "caption": ""
+      },
+      {
+        "src": "codametrix-3.jpg",
+        "caption": ""
+      },
+      {
+        "src": "codametrix-4.jpg",
+        "caption": ""
+      },
+      {
+        "src": "codametrix-5.jpg"
+      }
+    ]    
+  },
+  {
+    "id": "health-dollars",
+    "title": "Where Your Health Dollars Go",
+    "description":" **To Understand the Healthcare system, follow the money** \n\n Where your Health Dollars Go is a map of the US healthcare system and its components. By following the allocation and flow of money in healthcare, the thread of how the organizations, departments, and major players are connected becomes apparent.\n\n I expanded on prior work at GoInvo to present an interactive map of the flow. Check it out and see how your dollars work their way through the system from your paycheck to the paychecks of nurses and the pockets of shareholders and CEOs. Select stories to focus on specific parts of the system. Then check out my process below, as a comic!",
+    "client": "GoInvo",
+    "date": "2025",
+    "link": {
+      "url": "https://dreeves4321.github.io/healthcare-flow/",
+      "text": "Open the Interactive Map!"
+    },
+    "images": [
+      {
+        "src": "health_dollars/health-dollars-redux-hero.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--1.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--2.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--3.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--4.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--5.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--6.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--7.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--8.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--9.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--10.jpg",
+        "alt":""        
+      }
+    ]    
+  },
+  {
+    "id": "access",
+    "title": "Partnering for Global Market Research",
+    "description":"",
+    "client": "",
+    "date": "2025",
+    "images": [
+      {
+        "src": "",
+        "caption": ""        
+      }
+    ]    
   }
 ]

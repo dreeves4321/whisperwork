@@ -80,7 +80,7 @@
     "threads": [
       "ai-health"      
     ],
-    "thumbnail": "codametrix-1.png",
+    "thumbnail": "codametrix-0.jpg",
     "date": "2020",
     "client": "CodaMetrix"
   },
@@ -95,18 +95,5 @@
     "thumbnail": "health-dollars-1.jpg",
     "date": "2025",
     "client": "GoInvo"
-  },
-  {
-    "id": "access",
-    "title": "Partnering for Global Market Research ",
-    "description": "",
-    "type": "gallery",
-    "threads": [
-      "program-design"
-    ],
-    "thumbnail": "access-1.jpg",
-    "date": "2025",
-    "client": ""
   }
-
 ]

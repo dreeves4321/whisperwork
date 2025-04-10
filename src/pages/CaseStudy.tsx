@@ -2,11 +2,20 @@ import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useParams, useNavigate } from 'react-router-dom';
 import { CaseStudy as CaseStudyType } from '../types';
+import { Components } from 'react-markdown';
 
 const CaseStudy: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [caseStudy, setCaseStudy] = useState<CaseStudyType | null>(null);
+
+  const markdownComponents: Components = {
+    a: ({ href, children }) => (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    ),
+  };
 
   useEffect(() => {
     const loadCaseStudy = async () => {
@@ -30,6 +39,8 @@ const CaseStudy: React.FC = () => {
     return <div className="page-container">Loading...</div>;
   }
 
+ 
+
   return (
     <div className="case-study page-container">
       <img src={`${process.env.PUBLIC_URL}/images/${caseStudy.heroImage}`} alt={caseStudy.title} className="case-study__hero-image" />
@@ -41,22 +52,22 @@ const CaseStudy: React.FC = () => {
 
         <section className="case-study__topmatter">
           <h3>Problem</h3>
-          <p>{caseStudy.problem}</p>
+          <ReactMarkdown>{caseStudy.problem}</ReactMarkdown>
         </section>
 
         <section className="case-study__topmatter">
           <h3>Solution</h3>
-          <p>{caseStudy.solution}</p>
+          <ReactMarkdown>{caseStudy.solution}</ReactMarkdown>
         </section>
 
         <section className="case-study__topmatter">
           <h3>Results</h3>
-          <p>{caseStudy.results}</p>
+          <ReactMarkdown>{caseStudy.results}</ReactMarkdown>
         </section>
 
         <section className="case-study__topmatter">
           <h3>Commitment</h3>
-          <p>{caseStudy.commitment}</p>
+          <ReactMarkdown>{caseStudy.commitment}</ReactMarkdown>
         </section>
 
         {caseStudy.contentBlocks && caseStudy.contentBlocks.map((block, index) => {
@@ -73,7 +84,7 @@ const CaseStudy: React.FC = () => {
             case 'body':
               return (
                 <section key={index} className="case-study__text-block">
-                  <ReactMarkdown>{block.text}</ReactMarkdown>
+                  <ReactMarkdown components={markdownComponents}>{block.text}</ReactMarkdown>
                 </section>
               );
             case 'image':
@@ -101,6 +112,15 @@ const CaseStudy: React.FC = () => {
                   {block.text}
                 </a>
               );            
+            case 'video':
+              return (
+                <section key={index} className="case-study__video-block">
+                  <video src={`${process.env.PUBLIC_URL}/images/${block.src}`} controls />
+                  {block.text && (
+                    <p className="case-study__caption">{block.text}</p>
+                  )}
+                </section>
+              );
             default:
               return null;
           }

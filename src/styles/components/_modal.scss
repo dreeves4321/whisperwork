@@ -17,6 +17,18 @@ body.modal-open {
   padding: $spacing-unit-3 $spacing-unit-5;
 
   
+  p a {
+    color: $accent-color-dark;
+    font-weight: $font-weight-semibold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  
+    &:hover {
+      color: darken($accent-color-dark, 10%);
+      text-decoration: underline;
+    }
+  }
+
   &__close {
     position: absolute;
     top: $spacing-unit-2;
@@ -45,7 +57,9 @@ body.modal-open {
   &__content {
     display: flex;
     flex-direction: column;
-    overflow-y: auto;    
+    overflow-y: auto;
+    padding: $spacing-unit-2 0;
+    
   }
 
   &__hero {
@@ -55,7 +69,6 @@ body.modal-open {
     max-height: 500px;
     overflow: hidden;
     flex-shrink: 0;
-    margin-top: $spacing-unit-2;
     border-radius: 4px;
 
     &-image {
@@ -66,26 +79,40 @@ body.modal-open {
   }
 
   &__content-section {
-    padding-top: 2rem;
+    padding-top: $spacing-unit-3;
   }
 
   &__meta {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: $spacing-unit-1;
+    margin-bottom: $spacing-unit-1;
     font-weight: $font-weight-semibold;
     color: $text-color-light;
   }
 
   &__title {
     font-size: $font-size-header-large;
-    margin-bottom: 1rem;
+    margin-bottom: $spacing-unit-2;
     color: $text-color-dark;
   }
 
   &__description {
-    margin-bottom: 2rem;
+    margin-bottom: $spacing-unit-2;
     line-height: 1.6;
+
+    p {
+      margin-bottom: $spacing-unit-1;
+    }
+
+    li {
+      list-style-position: inside;
+      list-style-type: disc;
+    }
+  }
+
+  &__button {
+    margin: $spacing-unit-2 auto;
+    max-width: 600px;
   }
 
   &__grid {
@@ -128,5 +155,33 @@ body.modal-open {
 
   &__grid-item:hover &__grid-caption {
     transform: translateY(0);
+  }
+
+  &__fullscreen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  &__fullscreen-image-content {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  &__fullscreen-caption {
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+    max-width: 80%;
   }
 } 
