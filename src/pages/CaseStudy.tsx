@@ -47,28 +47,36 @@ const CaseStudy: React.FC = () => {
       <div className="content-container">
         <div className="case-study__title-container">
           <h1>{caseStudy.title}</h1>
-          <p className="case-study__client">for {caseStudy.client}</p>
+          {caseStudy.client && <p className="case-study__client">for {caseStudy.client}</p>}
         </div>
 
-        <section className="case-study__topmatter">
-          <h3>Problem</h3>
-          <ReactMarkdown>{caseStudy.problem}</ReactMarkdown>
-        </section>
+        {caseStudy.problem && (
+          <section className="case-study__topmatter">
+            <h3>Problem</h3>
+            <ReactMarkdown>{caseStudy.problem}</ReactMarkdown>
+          </section>
+        )}
 
-        <section className="case-study__topmatter">
-          <h3>Solution</h3>
-          <ReactMarkdown>{caseStudy.solution}</ReactMarkdown>
-        </section>
+        {caseStudy.solution && (
+          <section className="case-study__topmatter">
+            <h3>Solution</h3>
+            <ReactMarkdown>{caseStudy.solution}</ReactMarkdown>
+          </section>
+        )}
 
-        <section className="case-study__topmatter">
-          <h3>Results</h3>
-          <ReactMarkdown>{caseStudy.results}</ReactMarkdown>
-        </section>
+        {caseStudy.results && (
+          <section className="case-study__topmatter">
+            <h3>Results</h3>
+            <ReactMarkdown>{caseStudy.results}</ReactMarkdown>
+          </section>
+        )}
 
-        <section className="case-study__topmatter">
-          <h3>Commitment</h3>
-          <ReactMarkdown>{caseStudy.commitment}</ReactMarkdown>
-        </section>
+        {caseStudy.commitment && (
+          <section className="case-study__topmatter">
+            <h3>Commitment</h3>
+            <ReactMarkdown>{caseStudy.commitment}</ReactMarkdown>
+          </section>
+        )}
 
         {caseStudy.contentBlocks && caseStudy.contentBlocks.map((block, index) => {
           switch (block.type) {
