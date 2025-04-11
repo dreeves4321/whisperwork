@@ -9,7 +9,12 @@ export const usePersonalData = () => {
     const loadPersonal = async () => {
       try {
         console.log('Fetching personal data...');
-        const response = await fetch('/Portfolio/data/personal.json');
+        const response = await fetch('/data/personal.json', {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        });
         if (!response.ok) {
           throw new Error(`Failed to fetch personal data: ${response.status}`);
         }
