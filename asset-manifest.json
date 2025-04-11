@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/whisperwork/static/css/main.21a32c36.css",
+    "main.js": "/whisperwork/static/js/main.86997955.js",
+    "index.html": "/whisperwork/index.html",
+    "main.21a32c36.css.map": "/whisperwork/static/css/main.21a32c36.css.map",
+    "main.86997955.js.map": "/whisperwork/static/js/main.86997955.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21a32c36.css",
+    "static/js/main.86997955.js"
+  ]
+}
