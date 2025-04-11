@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/whisperwork/static/css/main.21a32c36.css",
-    "main.js": "/whisperwork/static/js/main.86997955.js",
+    "main.js": "/whisperwork/static/js/main.22224d4a.js",
     "index.html": "/whisperwork/index.html",
     "main.21a32c36.css.map": "/whisperwork/static/css/main.21a32c36.css.map",
-    "main.86997955.js.map": "/whisperwork/static/js/main.86997955.js.map"
+    "main.22224d4a.js.map": "/whisperwork/static/js/main.22224d4a.js.map"
   },
   "entrypoints": [
     "static/css/main.21a32c36.css",
-    "static/js/main.86997955.js"
+    "static/js/main.22224d4a.js"
   ]
 }
