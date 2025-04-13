@@ -1,5 +1,7 @@
 {
   "name": "whisperwork",
+  "homepage": "https://dfrdesign.com/",
+  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +14,6 @@
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "@types/react-router-dom": "^5.3.3",
-    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-markdown": "^10.1.0",
@@ -48,5 +49,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://danielreeves.github.io/whisperwork"
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }

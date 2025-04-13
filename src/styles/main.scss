@@ -37,18 +37,20 @@ $spacing-unit-4: calc(4 * $spacing-unit-1);
 $spacing-unit-5: calc(5 * $spacing-unit-1);
 $spacing-unit-6: calc(6 * $spacing-unit-1);
 
-// main layout
-$content-width: 1050px;
-$content-hpadding: $spacing-unit-5;
-$content-vpadding: $spacing-unit-3;
 
-// Breakpoints 
+// main layout
+$max-content-width: 1050px;
+$content-hpadding: $spacing-unit-5;
+$content-hpadding-mobile: $spacing-unit-2;
+$content-vpadding: $spacing-unit-3;
+$content-vpadding-mobile: $spacing-unit-2;
+// Breakpoints - defined as upper sizes
 $tablet: 900px;
 $mobile: 500px;
 
-// Mixins
-@mixin respond-to($breakpoint) {
-  @media (min-width: $breakpoint) {
+// -- Mixins
+@mixin for-size-up-through($breakpoint) {
+  @media (max-width: $breakpoint) {
     @content;
   }
 }
@@ -149,12 +151,12 @@ li {
 }
 
 .content-container {
-  max-width: $content-width;
+  max-width: $max-content-width;
   margin: $content-vpadding auto;
   padding: 0 $content-hpadding;
 
-  @include respond-to($tablet) {
-    padding: 0 $content-hpadding;
+  @include for-size-up-through($mobile) {
+    padding: 0 $content-hpadding-mobile;
   }
 }
  
@@ -272,6 +274,10 @@ li {
     
     &__title{
       margin-bottom: $spacing-unit-2;
+
+      @include for-size-up-through($mobile) {
+        margin-bottom: $spacing-unit-1;
+      }
     }
 
     .thread-name{
@@ -390,9 +396,14 @@ li {
   z-index: 1000;
 
   &__container {
-    max-width: $content-width;
+    max-width: $max-content-width;
     margin: 0 auto; 
     padding: 0 $content-hpadding;
+
+    @include for-size-up-through($mobile) {
+      padding: 0 $content-hpadding-mobile;
+    }
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -460,12 +471,20 @@ li {
   
   .footer-content {
     padding: $content-vpadding $content-hpadding;
-    max-width: $content-width;
+    max-width: $max-content-width;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    gap: $spacing-unit-1;
+
+    @include for-size-up-through($mobile) {
+      padding: $content-vpadding-mobile $content-hpadding-mobile;      
+    }
+
   }
   
   p {
@@ -478,10 +497,14 @@ li {
 
 // Threads filter
 .thread-filter {
-  max-width: $content-width;
+  max-width: $max-content-width;
   margin: 0 auto;
   padding: $content-vpadding $content-hpadding;
   background-color: $surface-color-mid;
+
+  @include for-size-up-through($mobile) {
+    padding: $content-vpadding-mobile $content-hpadding-mobile;
+  }
 
   hr {
     margin-top: $spacing-unit-1;
@@ -490,14 +513,23 @@ li {
   &__flex {
     display: flex;
     gap: $spacing-unit-4;
+
+    @include for-size-up-through($mobile) {
+      flex-direction: column;
+      gap: $spacing-unit-1;
+    }
   }
 
   &__buttons {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 320px;
-
+    width: 320px;    
+    @include for-size-up-through($mobile) {
+      width: 100%;
+      gap: 0.25rem;
+    }
+    
     p {
       font-size: $font-size-medium;
       font-weight: $font-weight-normal;
@@ -522,7 +554,7 @@ li {
     letter-spacing: .2px;
     box-sizing: border-box;
     position: relative;
-    
+
     img{
       position: absolute;
       width: 16px;
@@ -532,6 +564,18 @@ li {
       left: calc(0.5 * $content-hpadding - 8px);
       opacity: 0;
       transition: opacity 0.3s ease;
+    }
+
+    @include for-size-up-through($mobile) {
+      padding: 0.25rem $content-hpadding-mobile;
+      margin-left: calc(-1 * $content-hpadding-mobile);
+      width: calc(100% + 2 * $content-hpadding-mobile);
+      font-size: $font-size-header-small;
+      img {
+        left: calc(0.5 * $content-hpadding-mobile - 4px);
+        width: 8px;
+        height: 8px;
+      }
     }
 
     &:hover:not(.thread-filter__button--active) {

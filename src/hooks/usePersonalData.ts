@@ -9,7 +9,7 @@ export const usePersonalData = () => {
     const loadPersonal = async () => {
       try {
         console.log('Fetching personal data...');
-        const response = await fetch('/data/personal.json', {
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/personal.json`, {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'

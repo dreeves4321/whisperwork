@@ -1,7 +1,7 @@
 [
   {
     "id": "healthcare-stories",
-    "title": "Showing and telling national healthcare stories",
+    "title": "Visualizing national healthcare problems",
     "description": "An interactive healthcare story engine that helps scientists showcase their work in context of national problem sets and information.",
     "type": "case-study",
     "threads": [

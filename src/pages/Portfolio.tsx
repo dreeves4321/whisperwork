@@ -19,7 +19,7 @@ const Portfolio: React.FC = () => {
       try {
         // Load threads
         console.log('Fetching threads...');
-        const threadsResponse = await fetch('/data/threads.json', {
+        const threadsResponse = await fetch(`${process.env.PUBLIC_URL}/data/threads.json`, {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ const Portfolio: React.FC = () => {
 
         // Load work items
         console.log('Fetching work items...');
-        const workItemsResponse = await fetch('/data/all_work.json', {
+        const workItemsResponse = await fetch(`${process.env.PUBLIC_URL}/data/all_work.json`, {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -107,7 +107,7 @@ const Portfolio: React.FC = () => {
     if (item.type === 'gallery') {
       try {
         console.log('Fetching gallery item:', item.id);
-        const response = await fetch('/data/gallery_items.json', {
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/gallery_items.json`, {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
