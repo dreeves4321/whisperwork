@@ -37,28 +37,38 @@ $spacing-unit-4: calc(4 * $spacing-unit-1);
 $spacing-unit-5: calc(5 * $spacing-unit-1);
 $spacing-unit-6: calc(6 * $spacing-unit-1);
 
-
-// main layout
-$max-content-width: 1050px;
-$content-hpadding: $spacing-unit-5;
-$content-hpadding-mobile: $spacing-unit-2;
-$content-vpadding: $spacing-unit-3;
-$content-vpadding-mobile: $spacing-unit-2;
 // Breakpoints - defined as upper sizes
 $tablet: 900px;
-$mobile: 500px;
+$mobile: 576px;
 
 // -- Mixins
-@mixin for-size-up-through($breakpoint) {
+@mixin for-size-and-smaller($breakpoint) {
   @media (max-width: $breakpoint) {
     @content;
   }
 }
+@mixin for-bigger-than($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
 
-// Import component styles
-@import 'components/modal';
-@import 'components/CaseStudy';
-@import 'components/About';
+// main layout
+$max-content-width: 1050px;
+:root {
+  --content-hpadding: #{$spacing-unit-5};
+  --content-vpadding: #{$spacing-unit-3};
+  
+  @include for-size-and-smaller($tablet) {
+    --content-hpadding: #{$spacing-unit-4};
+    --content-vpadding: #{$spacing-unit-3};
+  }
+  @include for-size-and-smaller($mobile) {
+    --content-hpadding: #{$spacing-unit-2};
+    --content-vpadding: #{$spacing-unit-2};
+  }
+}
+
 
 // Base styles
 * {
@@ -152,12 +162,9 @@ li {
 
 .content-container {
   max-width: $max-content-width;
-  margin: $content-vpadding auto;
-  padding: 0 $content-hpadding;
+  margin: var(--content-vpadding) auto;
+  padding: 0 var(--content-hpadding);
 
-  @include for-size-up-through($mobile) {
-    padding: 0 $content-hpadding-mobile;
-  }
 }
  
 // buttons
@@ -206,76 +213,24 @@ li {
   .personal-info {
     padding-top: 0;
     margin-bottom: $spacing-unit-6;
+    h1{
+      margin-bottom: $spacing-unit-1;
+    }
   }
   
-  // Portfolio items (basic square)
-  .portfolio-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: $surface-color-light;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.11);
-    transition: transform 0.2s ease;
-
-    p {
-      margin-bottom: 0;
-    }
-
-    &:hover {
-      transform: scale(0.99);
-    }
-    
-    &__layout-container {
-        height: 100%;
-        width: 100%;
-    }
-
-    &__image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    &__content {
-      padding: $spacing-unit-1 $spacing-unit-2;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      background-color: $surface-color-shader;
-      color: $text-color-contrast;      
-      //min-height: 80px;
-    }
-
-    h3 {
-      color: $text-color-contrast;
-    }
-
-    &__title {
-      margin-bottom: 0.25rem;
-    }
-
-    &__client {
-      color: $text-color-contrast;
-    }
-
-    &__description {
-      display: none;
-    }
-
-    &__button{
-      display: none;
-    }
-  }
-
+  
   .portfolio-section{
     margin-bottom: $spacing-unit-6;
     margin-top: $spacing-unit-6;
+    @include for-size-and-smaller($mobile) {
+      margin-bottom: $spacing-unit-3;
+      margin-top: $spacing-unit-2;
+    }
     
     &__title{
       margin-bottom: $spacing-unit-2;
 
-      @include for-size-up-through($mobile) {
+      @include for-size-and-smaller($mobile) {
         margin-bottom: $spacing-unit-1;
       }
     }
@@ -290,100 +245,18 @@ li {
       .grid {
         display: flex;
         flex-wrap: wrap;
-        gap: $spacing-unit-2;
-        
-        > * {
-          flex: 1 1 300px;
-          min-width: 320px;
-          max-width: 500px;
-          height: 270px;
-        }
+        gap: $spacing-unit-2;        
       }
     } 
     
-    // filtered items above
     &__filtered{
-      .grid{
-        display: block;
-      }
-  
-      .portfolio-item {
-        max-width: 100%;
-        box-shadow: none;
-        aspect-ratio: auto;
-        margin-bottom: $spacing-unit-2;
-
-        &:hover {
-          //background-color: rgba(0, 0, 0, 0.02);
-          transform: none;
-  
-          .portfolio-item__image {
-            transform: scale(0.99);
-          }
-          
-          .button__secondary {
-            background-color: rgba($accent-color-light, 0.2);
-          }
-          
-        }
-        
-        &__layout-container {
-          display: flex;
-          align-items: flex-start;
-          gap: 10px;
-          align-self: stretch;
-          flex-direction: row;
-          height: 260px;      
-        }
-        
-        &__image{
-          flex: 1;
-          min-width: 0;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 10px;
-          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.11);
-          transition: transform 0.2s ease;
-          
-        }
-        
-        &__content {
-          flex: 0 0 auto;
-          width: 40%;
-          min-width: 330px;
-          background: none;        
-          position: relative;
-          border-radius: 0;
-          padding: $spacing-unit-2 $spacing-unit-1;
-          color: $text-color-dark;
-        }
-  
-        h3{
-          color: $text-color-dark;
-        }
-  
-        &__title {
-          font-size: $font-size-header-medium;
-          margin-bottom: 0.5rem;
-        }
-  
-        &__client {
-          color: $text-color-light;
-          margin-bottom: 0.5rem;
-        }
-  
-        &__description {
-          display: block;
-          margin-bottom: 0.5rem;
-          font-size: $font-size-medium;      
-        }
-  
-        &__button{
-          margin-top: $spacing-unit-2;
+      @extend .portfolio-section__all;
+      @include for-bigger-than($mobile) {
+        .grid{
           display: block;
         }
       }
-    }
+    }      
   }   
 }
 
@@ -398,11 +271,8 @@ li {
   &__container {
     max-width: $max-content-width;
     margin: 0 auto; 
-    padding: 0 $content-hpadding;
+    padding: 0 var(--content-hpadding);
 
-    @include for-size-up-through($mobile) {
-      padding: 0 $content-hpadding-mobile;
-    }
 
     display: flex;
     justify-content: space-between;
@@ -470,7 +340,7 @@ li {
   margin-bottom: 0;
   
   .footer-content {
-    padding: $content-vpadding $content-hpadding;
+    padding: var(--content-vpadding) var(--content-hpadding);
     max-width: $max-content-width;
     display: flex;
     flex-direction: row;
@@ -481,10 +351,6 @@ li {
     flex-wrap: wrap;
     gap: $spacing-unit-1;
 
-    @include for-size-up-through($mobile) {
-      padding: $content-vpadding-mobile $content-hpadding-mobile;      
-    }
-
   }
   
   p {
@@ -494,17 +360,12 @@ li {
 }
 
 
-
 // Threads filter
 .thread-filter {
   max-width: $max-content-width;
   margin: 0 auto;
-  padding: $content-vpadding $content-hpadding;
+  padding: var(--content-vpadding) var(--content-hpadding);
   background-color: $surface-color-mid;
-
-  @include for-size-up-through($mobile) {
-    padding: $content-vpadding-mobile $content-hpadding-mobile;
-  }
 
   hr {
     margin-top: $spacing-unit-1;
@@ -514,7 +375,7 @@ li {
     display: flex;
     gap: $spacing-unit-4;
 
-    @include for-size-up-through($mobile) {
+    @include for-size-and-smaller($mobile) {
       flex-direction: column;
       gap: $spacing-unit-1;
     }
@@ -524,10 +385,14 @@ li {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 320px;    
-    @include for-size-up-through($mobile) {
+    width: 300px;    
+    @include for-size-and-smaller($mobile) {
       width: 100%;
       gap: 0.25rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
     }
     
     p {
@@ -536,10 +401,36 @@ li {
       color: $text-color-light;
     }
   }
+  &__button--nav{
+    display: none;
+    @include for-size-and-smaller($mobile) {
+      display: block;
+    }
+    background-color: rgba(0, 0, 0, 0.02);
+    border: 1px solid transparent;
+    padding: 0.5rem 0.5rem;
+    border-radius: 4px;
+    line-height: 1;
+    &:active{
+      border: 1px solid rgba($accent-color-light, 0.4);
+    }
+
+  }
+
+  &__small--label{
+    display: none;
+    @include for-size-and-smaller($mobile) {
+      display: block;
+      font-size: $font-size-header-small;
+      font-weight: $font-weight-light;
+      font-family: $font-family-sans-serif;    
+      color: $accent-color-dark;
+    }
+  }
 
   &__button {
-    padding: 0.5rem $content-hpadding;
-    margin-left: calc(-1 * $content-hpadding);
+    padding: 0.5rem var(--content-hpadding);
+    margin-left: calc(-1 * var(--content-hpadding));
     border: 1px solid transparent;
     border-radius: 4px;
     background: none;
@@ -554,6 +445,10 @@ li {
     letter-spacing: .2px;
     box-sizing: border-box;
     position: relative;
+    
+    @include for-size-and-smaller($mobile) {
+      display: none;      
+    }
 
     img{
       position: absolute;
@@ -561,21 +456,9 @@ li {
       height: 16px;
       top: 50%;
       transform: translateY(-50%);
-      left: calc(0.5 * $content-hpadding - 8px);
+      left: calc(0.5 * var(--content-hpadding) - 8px);
       opacity: 0;
       transition: opacity 0.3s ease;
-    }
-
-    @include for-size-up-through($mobile) {
-      padding: 0.25rem $content-hpadding-mobile;
-      margin-left: calc(-1 * $content-hpadding-mobile);
-      width: calc(100% + 2 * $content-hpadding-mobile);
-      font-size: $font-size-header-small;
-      img {
-        left: calc(0.5 * $content-hpadding-mobile - 4px);
-        width: 8px;
-        height: 8px;
-      }
     }
 
     &:hover:not(.thread-filter__button--active) {
@@ -602,6 +485,12 @@ li {
     }
   }
 
+  &__name {
+    display:none;
+    font-weight: $font-weight-semibold;
+    color: $text-color-accent;
+  }
+
   &__content {
     flex: 1;
     display: flex;
@@ -609,20 +498,7 @@ li {
     gap: $spacing-unit-2;
   }
 
-  // special styling for featured item image
-  &__featured {
-    .portfolio-item {
-      max-width: 800px;
-      aspect-ratio: 1.62;
-      &__content{
-        width: auto;
-        max-width: 90%;
-        border-top-left-radius: 10px;
-      }
-    }
-  }
-
-  @media (max-width: $mobile) {
+  @include for-size-and-smaller($mobile) {
     flex-direction: column;
 
     &__buttons {
@@ -632,3 +508,9 @@ li {
     }
   }
 }
+
+// Import component styles
+@import 'components/modal';
+@import 'components/CaseStudy';
+@import 'components/About';
+@import 'components/PortfolioItem';
