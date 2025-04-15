@@ -24,12 +24,12 @@ const About: React.FC = () => {
 
   return (
     <div className="about page-container content-container">
-      <div className="about__header">
+      <h1>About Me</h1>
+      <div className="about__section about__header">
         <div className="about__header-image">
           <img src={personal.headshot} alt="Headshot" />
         </div>
         <div className="about__content">
-          <h1>About Me</h1>
           <section className="about__intro">
             <p>{personal.bio}</p>
           </section>

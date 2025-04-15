@@ -14,8 +14,6 @@ body.modal-open {
   justify-content: center;
   align-items: center;
   z-index: 2000;
-  padding: $spacing-unit-3 $spacing-unit-5;
-
   
   p a {
     color: $accent-color-dark;
@@ -29,23 +27,30 @@ body.modal-open {
     }
   }
 
+  &__holder{
+    position: relative;
+  }
+
   &__close {
     position: absolute;
-    top: $spacing-unit-2;
-    right: $spacing-unit-2;
+    height: 24px;
+    width: 24px;
+    top: 0px;
+    right: calc(0.5 *var(--content-hpadding) - 8px);
+   
     background: none;
     border: none;
     color: $text-color-contrast;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1px;
+    line-height: 1px;
     cursor: pointer;
     z-index: 1;
   }
   &__window {
     background-color: $surface-color-light;
     max-width: 1000px;
-    max-height: 94vh;
-    margin: 0 auto;
+    max-height: 96vh;
+    margin: 0 var(--content-hpadding);
     padding: 0 $spacing-unit-2;
     border-radius: $spacing-unit-1;
     position: relative;

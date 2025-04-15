@@ -39,6 +39,7 @@ $spacing-unit-6: calc(6 * $spacing-unit-1);
 
 // Breakpoints - defined as upper sizes
 $tablet: 900px;
+$small-tablet: 700px;
 $mobile: 576px;
 
 // -- Mixins
@@ -52,6 +53,12 @@ $mobile: 576px;
     @content;
   }
 }
+@mixin for-tablet-only{
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    @content;
+  }
+}
+
 
 // main layout
 $max-content-width: 1050px;
@@ -375,6 +382,10 @@ li {
     display: flex;
     gap: $spacing-unit-4;
 
+    @include for-size-and-smaller($tablet) {
+      gap: $spacing-unit-2;
+    }
+
     @include for-size-and-smaller($mobile) {
       flex-direction: column;
       gap: $spacing-unit-1;
@@ -386,6 +397,9 @@ li {
     flex-direction: column;
     gap: 1rem;
     width: 300px;    
+    @include for-size-and-smaller($tablet) {
+      gap: 0.25rem;
+    }
     @include for-size-and-smaller($mobile) {
       width: 100%;
       gap: 0.25rem;
@@ -393,14 +407,10 @@ li {
       justify-content: space-between;
       align-items: center;
       flex-wrap: nowrap;
-    }
-    
-    p {
-      font-size: $font-size-medium;
-      font-weight: $font-weight-normal;
-      color: $text-color-light;
-    }
+    }    
   }
+
+  // mobile nav button
   &__button--nav{
     display: none;
     @include for-size-and-smaller($mobile) {
@@ -414,9 +424,8 @@ li {
     &:active{
       border: 1px solid rgba($accent-color-light, 0.4);
     }
-
   }
-
+  // small label for mobile
   &__small--label{
     display: none;
     @include for-size-and-smaller($mobile) {
@@ -446,6 +455,12 @@ li {
     box-sizing: border-box;
     position: relative;
     
+    // make smaller on tablet
+    @include for-tablet-only{
+      font-size: $font-size-header-small;
+      letter-spacing: .1px;      
+    }
+    // hide on mobile
     @include for-size-and-smaller($mobile) {
       display: none;      
     }
@@ -459,6 +474,11 @@ li {
       left: calc(0.5 * var(--content-hpadding) - 8px);
       opacity: 0;
       transition: opacity 0.3s ease;
+      @include for-size-and-smaller($tablet) {
+        width: 12px;
+        height: 12px;
+        left: calc(0.5 * var(--content-hpadding) - 4px);
+      }
     }
 
     &:hover:not(.thread-filter__button--active) {

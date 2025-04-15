@@ -13,7 +13,7 @@
         "text": "LinkedIn",
         "url": "www.linkedin.com/in/danielfreeves"
     },
-    "bio": "Hello! I'm a product designer, previously developer, previously scientist. I'm based in (and have always lived in) the Boston area. I'm currently looking for a position in software design or product development.",
+    "bio": "Hello! I'm Daniel Reeves, and I'm a product designer, previously developer, previously scientist. I'm based in (and have always lived in) the Boston area. I'm currently looking for a position in software design or product development.",
     "images": [
         {
             "src": "images/about/side1.jpeg",
@@ -67,7 +67,7 @@
         },
         {
             "title": "Hobbyist",
-            "text": "I enjoy building woodworking and gardening. I like coaxing beautiful shapes and textures from the raw natural materials of wood and soil.",
+            "text": "I enjoy building, woodworking, and gardening. I like coaxing beautiful shapes and textures from the raw natural materials of wood and soil.",
             "images":[
                 {
                     "src": "images/about/side1.jpeg",
