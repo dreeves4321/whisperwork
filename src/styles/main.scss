@@ -223,6 +223,9 @@ li {
     h1{
       margin-bottom: $spacing-unit-1;
     }
+    @include for-size-and-smaller($small-tablet) {
+      margin-bottom: $spacing-unit-4;
+    }
   }
   
   
