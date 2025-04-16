@@ -228,7 +228,12 @@ li {
     }
   }
   
-  
+  .descriptor-separator{
+    width: 10px;
+    height: 10px;
+    margin: auto 8px;
+  }
+
   .portfolio-section{
     margin-bottom: $spacing-unit-6;
     margin-top: $spacing-unit-6;

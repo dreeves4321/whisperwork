@@ -173,7 +173,14 @@ const Portfolio: React.FC = () => {
     <div className="portfolio page-container">
       <div className="content-container personal-info">        
           <h1>{personal.name}</h1>
-          <p>{personal.descriptors.join(' · ')}</p>
+          <p>{personal.descriptors.map((descriptor, index) => (
+            <React.Fragment key={index}>
+              {descriptor}
+              {index < personal.descriptors.length - 1 && (
+                <img src={`${process.env.PUBLIC_URL}/icons/star.svg`} alt="star" className="descriptor-separator" />
+              )}
+            </React.Fragment>
+          ))}</p>
       </div>
       
       <ThreadFilter
