@@ -3,17 +3,17 @@
     "descriptors": ["Designer", "Builder", "Scientist"],
     "headshot": "images/about/headshot.jpg",    
     "contacts": {
-        "email": "dreeves4321@gmail.com",
+        "email": "dan@dfrdesign.com",
         "phone": "617.894.3265",
         "github": "https://github.com/dreeves4321",
-        "linkedin": "www.linkedin.com/in/danielfreeves"
+        "linkedin": "https://www.linkedin.com/in/danielfreeves"
     },
     "secondary contact":
     {
         "text": "LinkedIn",
-        "url": "www.linkedin.com/in/danielfreeves"
+        "url": "https://www.linkedin.com/in/danielfreeves"
     },
-    "bio": "Hello! I'm Daniel Reeves, and I'm a product designer, previously developer, previously scientist. I'm based in (and have always lived in) the Boston area. I'm currently looking for a position in software design or product development.",
+    "bio": "Hello! I'm Daniel Reeves, and I'm a product designer, previously developer, previously scientist. I'm a Boston area native, and I'm currently looking for a position in user experience or product design.",
     "images": [
         {
             "src": "images/about/side1.jpeg",
@@ -67,7 +67,7 @@
         },
         {
             "title": "Hobbyist",
-            "text": "I enjoy building, woodworking, and gardening. I like coaxing beautiful shapes and textures from the raw natural materials of wood and soil.",
+            "text": "I enjoy playign with my cat, woodworking, and, gardening. I like coaxing beautiful shapes and textures from the raw natural materials of wood and soil.",
             "images":[
                 {
                     "src": "images/about/side1.jpeg",
