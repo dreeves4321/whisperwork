@@ -60,6 +60,16 @@
     "client": "MITRE Corporation"
   },
   {
+    "id": "tiletap",
+    "title": "TileTap",
+    "description": "Market research surveys reimagined. We designed new ways to onboard, engage, and retain panelists.",
+    "type": "gallery",
+    "threads": ["program-design"],
+    "thumbnail": "tiletap-0.jpg",
+    "date": "2025",
+    "client": "A Global market research firm"
+  },
+  {
     "id": "oa",
     "title": "Designing for Prior Auth",
     "description": "Faster approvals, better outcomes. Software design for efficient, more intelligent protocol review, saving time and burden for insurers, providers, and hospitals.",

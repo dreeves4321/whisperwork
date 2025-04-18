@@ -185,14 +185,30 @@
     ]    
   },
   {
-    "id": "access",
-    "title": "Partnering for Global Market Research",
-    "description":"",
-    "client": "",
+    "id": "tiletap",
+    "title": "TileTap — Reimagining Market Research",
+    "description":"Today, you can download any of hundreds of apps that promise to pay you for completing surveys. The market research industry relies on you, the panelist, to give data through these apps. Problem is, the apps aren't great. The user experience is awkward, tedious, and boring. You might not get paid, and if you do, it works out to pennies per hour. And the data is notoriously difficult to analyze, as many responses do not have authentic responses. Working with a global market research group we developed a concept for a new approach. Our designs designs aim to **Hook**, **Direct**, **Enable**, and **Motivate** the panelists. The experience becomes delightful, simple, clear, and rewarding. \n\n *To accesss the the prototype, please send me a note for the password*",
+    "client": "A global market research firm",
     "date": "2025",
+    "link": {
+      "url": "https://www.figma.com/proto/D8xEkmRL2ZJNxOnkCAqaTt/Survey-App?page-id=1675%3A28060&node-id=2574-14536&p=f&viewport=-286%2C362%2C0.08&t=HtiAPbgg8luSEu8e-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2574%3A14536",
+      "text": "Prototype (password protected)"
+    },
     "images": [
       {
-        "src": "",
+        "src": "tiletap-0.jpg",
+        "caption": ""        
+      },{
+        "src": "tiletap-1.jpg",
+        "caption": ""        
+      },{
+        "src": "tiletap-2.jpg",
+        "caption": ""        
+      },{
+        "src": "tiletap-3.jpg",
+        "caption": ""        
+      },{
+        "src": "tiletap-4.jpg",
         "caption": ""        
       }
     ]    
