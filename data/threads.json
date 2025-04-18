@@ -9,24 +9,24 @@
     "id": "interactive-experiences",
     "name": "Interactive Experiences",
     "description": "I am drawn to the beauty and challenges of crafting immersive multimedia experiences. Whether the user is a guest at a museum or a visitor at a corporate campus, I find it satisfying and fulfilling to infuse their experience with joy and delight.",
-    "featured": "build-a-lamp"
+    "featured": "design-a-lamp"
   },
   {
     "id": "complex-problems",
     "name": "Complex Problems",
-    "description": "There are many wicked problems in the health domain. I grapple with them by first building a deep understanding of the systems and processes. Then to make them understandable and manageable, I apply an iterative design process to breaking down and visualizing the complexities.",
+    "description": "There are many wicked problems in the health domain. I grapple with them by first building a deep understanding of the systems and processes. Then to make them understandable and manageable, I apply an iterative design process to break down and visualize the complexities.",
     "featured": "health-dollars"
   },
   {
     "id": "health-it",
     "name": "Health IT",
-    "description": "The health industry expends many billions of dollars creating, maintaining, and reviewing documentation. Poor interfaces and processes can make these core tasks frustrating, awkward, and error-prone. How might we design tools that improve both provider efficiency and improve patient outcomes?",
+    "description": "The health industry expends many billions of dollars creating, maintaining, and reviewing documentation. Poor interfaces and processes can make these core tasks frustrating, awkward, and error-prone. I strive to design tools that improve both provider efficiency and improve patient outcomes.",
     "featured": "maya"
   },
   {
     "id": "ai-health",
     "name": "AI in Health",
-    "description": "There are many opportunities in healthcare to apply artificial intelligence. How might we design tools that leverage AI to streamline documentation and improve decision-making processes?",
+    "description": "There are many opportunities in healthcare to apply artificial intelligence. I have experience designing tools that leverage AI to streamline documentation and improve decision-making processes.",
     "featured": "codametrix"
   }
 ]
