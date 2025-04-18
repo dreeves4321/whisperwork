@@ -12,6 +12,11 @@
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.11);
     transition: transform 0.2s ease;
 
+    //select only the children of portfolio-item. these are the pointer div and the link (depending on what kind of link it is)
+    & > * {
+      display: contents;
+    }
+
     p {
       margin-bottom: 0;
     }
