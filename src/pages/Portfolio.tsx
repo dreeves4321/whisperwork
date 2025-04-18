@@ -177,7 +177,7 @@ const Portfolio: React.FC = () => {
             <React.Fragment key={index}>
               {descriptor}
               {index < personal.descriptors.length - 1 && (
-                <img src={`${process.env.PUBLIC_URL}/icons/star.svg`} alt="star" className="descriptor-separator" />
+                <img src={`${process.env.PUBLIC_URL}/icons/star.svg`} alt="star" className="star-bullet" />
               )}
             </React.Fragment>
           ))}</p>

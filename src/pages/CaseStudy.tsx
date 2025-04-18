@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Components } from 'react-markdown';
 import { useParams, useNavigate } from 'react-router-dom';
 import { CaseStudy as CaseStudyType } from '../types';
-import { Components } from 'react-markdown';
+
 
 const CaseStudy: React.FC = () => {
   const { id } = useParams<{ id: string }>();

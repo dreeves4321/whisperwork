@@ -10,11 +10,13 @@ interface PortfolioItemProps {
 const PortfolioItem: React.FC<PortfolioItemProps> = ({ item, onGalleryClick }) => {
   const itemContent = (
     <div className="portfolio-item__layout-container">
-      <img
-        src={`${process.env.PUBLIC_URL}/images/${item.thumbnail}`}
-        alt={item.title}
-        className="portfolio-item__image"
-      />
+      <div className="portfolio-item__img-holder">
+        <img
+          src={`${process.env.PUBLIC_URL}/images/${item.thumbnail}`}
+          alt={item.title}
+          className="portfolio-item__image"
+        />
+      </div>
       <div className="portfolio-item__content">
         {item.client && <p className="portfolio-item__client">{item.client}</p>}
         <h3 className="portfolio-item__title">{item.title}</h3>

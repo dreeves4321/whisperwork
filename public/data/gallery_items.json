@@ -1,24 +1,38 @@
 [
   {
-    "id": "build-a-lamp",
-    "title": "Build-a-Lamp",
-    "description": "An interactive installation allowing museum visitors to design and illuminate their own Tiffany lamp creation.",    
+    "id": "design-a-lamp",
+    "title": "Design-a-Lamp",
+    "description": "The newly renovated New-York Historical Society’s Tiffany Gallery showcases the society’s exceptional collection of decorative glass lamps designed and crafted by the Tiffany Studios. Design-A-Lamp offers museum guests the opportunity to design and illuminate their own creation in the company of the masterpieces. \n\n The guest approaches an expansive tabletop featuring a glowing white lampshade. The lampshade, constructed in the style of the original Dragonfly lamps, is composed of hundreds of individual panes of glass. This design is mimicked on the tabletop; eight times in white tracing and once in brass inlays. By touching or brushing their hand against the brass, the guest illuminates the corresponding glass panes with a beautiful palette of colors. The user crafts their own unique colored design by selecting palettes as they color. Palette selection is executed with a mechanical wheel and representative glass swatch. \n\n Electronic Hardware: Arduino boards with custom shields, Adafruit MPR121 12-Key Capacitive Touch Sensor Breakout boards with custom printed dongles, USDigital rotary encoder, assorted individually addressable RGB LEDs \n\n Software: Custom Arduino firmware with Serial communication (on [Github](https://github.com/dreeves4321/Arduino/)), C++ application, remote web monitoring",    
     "client": "New-York Historical Society",
     "date": "2016",
     "images": [
       {
-        "src": "build-a-lamp-1.jpg",
+        "src": "design-a-lamp-1.jpg",
         "caption": "The New-York Historical Society's Tiffany Gallery showcases the society's exceptional collection of decorative glass lamps designed and crafted by the Tiffany Studios.",
         "alt": "A Tiffany style lampshade on a black table, illuminated from within."
       },
       {
-        "src": "build-a-lamp-2.jpg",
+        "src": "design-a-lamp-video.mp4",
+        "caption": ""
+      },
+      {
+        "src": "design-a-lamp-2.jpg",
         "caption": "Design-A-Lamp offers museum guests the magical opportunity to design and illuminate their own creation in the company of masterpieces."
       },
       {
-        "src": "build-a-lamp-3.jpg",
+        "src": "design-a-lamp-4.jpg",
+        "caption": "The user can select from dozens of pre-crafted palettes.",
+        "alt": "The lamp, illuminated blue."
+      },
+      {
+        "src": "design-a-lamp-3.jpg",
         "caption": "Hundreds of individually addressable LEDs are anchored to the inside of the lamp on a 3D printed armature.",
         "alt": "The inside of the lamp, exposing a nest of wires and LEDs."
+      },
+      {
+        "src": "design-a-lamp-5.jpg",
+        "caption": "Each brass inlay is connected on the underside to a nearby capacitive touch sensor board. In turn, those boards are connected to the Arduino controller, which in turn communicates with the PC. Acryllic panels label and protect the electronics and wiring.",
+        "alt": "An array of wiring, clips, and electronics on the underside of the black table."
       }
     ]
   },
@@ -32,6 +46,21 @@
       {
         "src": "fluxnotes-1.jpg",
         "caption": "",
+        "alt":""      
+      },
+      {
+        "src": "fluxnotes-2.jpg",
+        "caption": "By typing hashtags before clinical vocabulary, the provider captures SHR data while they write their clinical notes.",
+        "alt":""      
+      },
+      {
+        "src": "fluxnotes-3.jpg",
+        "caption": "The application provides multiple modalities for capturing structured data: through hashtags within note writing and through rapid Point of Sale style data capture.",
+        "alt":""      
+      },
+      {
+        "src": "fluxnotes-4.jpg",
+        "caption": "The longitudinal patient view uses well deesigned graphics to effectively give the provider a big picture or focused view on a specific topic over a period of time. ",
         "alt":""      
       }
     ]    
@@ -67,7 +96,7 @@
   {
     "id": "health-dollars",
     "title": "Where Your Health Dollars Go",
-    "description":" **To Understand the Healthcare system, follow the money** \n\n Where your Health Dollars Go is a map of the US healthcare system and its components. By following the allocation and flow of money in healthcare, the thread of how the organizations, departments, and major players are connected becomes apparent.\n\n I expanded on prior work at GoInvo to present an interactive map of the flow. Check it out and see how your dollars work their way through the system from your paycheck to the paychecks of nurses and the pockets of shareholders and CEOs. Select stories to focus on specific parts of the system. Then check out my process below, as a comic!",
+    "description":" **To Understand the Healthcare system, follow the money** \n\n Where your Health Dollars Go is a map of the US healthcare system and its components. By following the allocation and flow of money in healthcare, the thread of how the organizations, departments, and major players are connected becomes apparent.\n\n I expanded on [prior work at GoInvo](https://www.goinvo.com/vision/healthcare-dollars/) to present an interactive map of the flow. Check it out and see how your dollars work their way through the system from your paycheck to the paychecks of nurses and the pockets of shareholders and CEOs. Select stories to focus on specific parts of the system. Then check out my process below, as a comic!",
     "client": "GoInvo",
     "date": "2025",
     "link": {
@@ -77,6 +106,9 @@
     "images": [
       {
         "src": "health_dollars/health-dollars-redux-hero.jpg",
+        "alt":""        
+      },{
+        "src": "health_dollars/health-dollars-redux-comic-frame--0.jpg",
         "alt":""        
       },{
         "src": "health_dollars/health-dollars-redux-comic-frame--1.jpg",
@@ -108,6 +140,47 @@
       },{
         "src": "health_dollars/health-dollars-redux-comic-frame--10.jpg",
         "alt":""        
+      }
+    ]    
+  },
+  {
+    "id": "digital-stacks",
+    "title": "Digital Stacks",
+    "description":"The Digital Stacks are a window onto the continually growing collection of materials the Boston Public Library has digitized. Situated in the Johnson Building lobby, the installation shows off those materials — beautiful, strange, informative, and historic — in a visually appealing and browsable interface. It encourages the patron to stumble upon and be delighted by things they may not have been looking for. The patron explores the collection via 4 lenses: time, location, color, and category. \n\n The installation consists of 4 stations, each consisting of a pair of large touch screens complemented by physical library items in adjacent gallery cases. The Small Design Firm team designed and developed the experience in C++ on our proprietary OpenGL framework.",
+    "client": "Boston Public Library",
+    "date": "2015",
+    "images": [
+      {
+        "src": "stacks-0.jpg",
+        "caption": ""        
+      },{
+        "src": "stacks-1.jpg",
+        "caption": ""        
+      },{
+        "src": "stacks-2.jpg",
+        "caption": ""        
+      },{
+        "src": "stacks-3.jpg",
+        "caption": ""        
+      }
+    ]    
+  },
+  {
+    "id": "sama-sama",
+    "title": "SamaSama — Conductors",
+    "description":"Conductors was an attraction for SamaSama, an interactive audiovisual theme park full of attractions where players interact in groups to create music. In Conductors, 42 players work together to conduct a choral piece. Each player is given a conductor’s baton with an accelerometer embedded in it; they are then given cues for motions on a giant projection screen situated in front of them. As each player successfully hits their cue, their part of the choir sings it part — and when they miss, their part falls silent. SamaSama ran in Madrid, Winter of 2016.",
+    "client": "Cirque du Soleil",
+    "date": "2016",
+    "images": [
+      {
+        "src": "samasama-1.jpg",
+        "caption": ""        
+      },{
+        "src": "samasama-3.jpg",
+        "caption": ""        
+      },{
+        "src": "samasama-2.jpg",
+        "caption": ""        
       }
     ]    
   },

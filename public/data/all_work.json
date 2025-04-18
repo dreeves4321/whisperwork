@@ -12,14 +12,14 @@
     "client": "Mitre Corporation"
   },
   {
-    "id": "build-a-lamp",
-    "title": "Build-a-Lamp",
+    "id": "design-a-lamp",
+    "title": "Design-a-Lamp",
     "description": "An interactive installation allowing museum visitors to design and illuminate their own Tiffany lamp creation.",
     "type": "gallery",
     "threads": [
       "interactive-experiences"
     ],
-    "thumbnail": "build-a-lamp-1.jpg",
+    "thumbnail": "design-a-lamp-1.jpg",
     "date": "2017",
     "client": "New-York Historical Society"
   },
@@ -95,5 +95,29 @@
     "thumbnail": "health-dollars-1.jpg",
     "date": "2025",
     "client": "GoInvo"
+  },
+  {
+    "id": "digital-stacks",
+    "title": "Digital Stacks",
+    "description": "The Digital Stacks are a window onto the continually growing collection of materials the Boston Public Library has digitized.",
+    "type": "gallery",
+    "threads": [
+      "interactive-experiences"
+    ],
+    "thumbnail": "stacks-0.jpg",
+    "date": "2015",
+    "client": "Boston Public Library"
+  },
+  {
+    "id": "sama-sama",
+    "title": "SamaSama — Conductors",
+    "description": "Conductors was an attraction for SamaSama, an interactive audiovisual theme park full of attractions where players interact in groups to create music.",
+    "type": "gallery",
+    "threads": [
+      "interactive-experiences"
+    ],
+    "thumbnail": "samasama-1.jpg",
+    "date": "2016",
+    "client": "Cirque du Soleil"
   }
 ]

@@ -167,6 +167,10 @@ li {
   background-color: $surface-color-mid;
 }
 
+.page-container{
+  padding-top: 45px;
+}
+
 .content-container {
   max-width: $max-content-width;
   margin: var(--content-vpadding) auto;
@@ -228,7 +232,7 @@ li {
     }
   }
   
-  .descriptor-separator{
+  .star-bullet{
     width: 10px;
     height: 10px;
     margin: auto 8px;
@@ -277,12 +281,22 @@ li {
 
 // Components
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  
+  &__hidden{
+    transform: translateY(-100%);
+  }
+
   padding: 8px 0 8px 0;
   background-color: $surface-color-mid;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-
+  border-bottom: 1px solid $surface-color-line;
+  
   &__container {
     max-width: $max-content-width;
     margin: 0 auto; 

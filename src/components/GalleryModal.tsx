@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Components } from 'react-markdown';
 import { GalleryItem } from '../types';
 import '../styles/main.scss';
 
@@ -17,6 +18,14 @@ const GalleryModal: React.FC<GalleryModalProps> = ({ item, onClose }) => {
       document.body.classList.remove('modal-open');
     };
   }, []);
+
+  const markdownComponents: Components = {
+    a: ({ href, children }) => (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    ),
+  };
 
   const handleGridItemClick = (index: number) => {
     setSelectedImage(index);
@@ -60,11 +69,11 @@ const GalleryModal: React.FC<GalleryModalProps> = ({ item, onClose }) => {
             <div className="modal__content-section">
               <div className="modal__meta">
                 <span>{item.client}</span>
-                <span>•</span>
+                <img src={`${process.env.PUBLIC_URL}/icons/star.svg`} alt="°" className="star-bullet" />
                 <span>{item.date}</span>
               </div>
               <h2 className="modal__title">{item.title}</h2>
-              <div className="modal__description"><ReactMarkdown>{item.description}</ReactMarkdown></div>
+              <div className="modal__description"><ReactMarkdown components={markdownComponents}>{item.description}</ReactMarkdown></div>
               {item.link && (
                 <a 
                   href={item.link.url}
@@ -82,11 +91,20 @@ const GalleryModal: React.FC<GalleryModalProps> = ({ item, onClose }) => {
                     className="modal__grid-item"
                     onClick={() => handleGridItemClick(index)}
                   >
-                    <img 
-                      src={`${process.env.PUBLIC_URL}/images/${image.src}`}
-                      alt={image.caption}
-                      className="modal__grid-image"
-                    />
+                    {image.src.endsWith('.mp4') ? (
+                      <video 
+                        src={`${process.env.PUBLIC_URL}/images/${image.src}`}
+                        className="modal__grid-image"
+                        controls
+                        poster={`${process.env.PUBLIC_URL}/images/${image.src.replace('.mp4', '.jpg')}`}
+                      />
+                    ) : (
+                      <img 
+                        src={`${process.env.PUBLIC_URL}/images/${image.src}`}
+                        alt={image.caption}
+                        className="modal__grid-image"
+                      />
+                    )}                    
                     {image.caption && <div className="modal__grid-caption">{image.caption}</div>}
                   </div>
                 ))}
