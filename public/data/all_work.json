@@ -71,7 +71,7 @@
   },
   {
     "id": "oa",
-    "title": "Designing for Prior Auth",
+    "title": "Designing for Prior Authorization",
     "description": "Faster approvals, better outcomes. Software design for efficient, more intelligent protocol review, saving time and burden for insurers, providers, and hospitals.",
     "type": "case-study",
     "threads": [
@@ -80,7 +80,7 @@
     ],
     "thumbnail": "oa-1.jpg",
     "date": "2020",
-    "client": ""
+    "client": "A Leader in cancer care management"
   },
   {
     "id": "codametrix",

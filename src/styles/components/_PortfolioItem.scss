@@ -53,12 +53,9 @@
       //min-height: 80px;
     }
 
-    h3 {
-      color: $text-color-contrast;
-    }
-
     &__title {
       margin-bottom: 0.25rem;
+      color: $text-color-contrast;
     }
 
     &__client {

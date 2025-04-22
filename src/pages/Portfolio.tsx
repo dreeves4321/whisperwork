@@ -198,7 +198,7 @@ const Portfolio: React.FC = () => {
             {/* Active Thread Items - Mixed Case Studies and Gallery Items */}
             {activeThreadItems.length > 0 && (
               <section className="portfolio-section portfolio-section__filtered">
-                <p className="portfolio-section__title">More <strong>{threads.find(t => t.id === activeThread)?.name || 'all threads'}</strong></p>
+                <p className="portfolio-section__title">More work with <strong>{threads.find(t => t.id === activeThread)?.name || 'all threads'}</strong></p>
                 <div className="grid">
                   {activeThreadItems.map((item) => (
                     <PortfolioItem
