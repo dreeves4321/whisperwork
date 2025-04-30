@@ -187,7 +187,7 @@
   {
     "id": "tiletap",
     "title": "TileTap — Reimagining Market Research",
-    "description":"Today, you can download any of hundreds of apps that promise to pay you for completing surveys. The market research industry relies on you, the panelist, to give data through these apps. Problem is, the apps aren't great. The user experience is awkward, tedious, and boring. You might not get paid, and if you do, it works out to pennies per hour. And the data is notoriously difficult to analyze, as many responses do not have authentic responses. Working with a global market research group we developed a concept for a new approach. Our designs designs aim to **Hook**, **Direct**, **Enable**, and **Motivate** the panelists. The experience becomes delightful, simple, clear, and rewarding. \n\n *To accesss the the prototype, please send me a note for the password*",
+    "description":"Today, you can download any of hundreds of apps that promise to pay you for completing surveys. The market research industry relies on you, the panelist, to give data through these apps. Problem is, the apps aren't great. The user experience is awkward, tedious, and boring. You might not get paid, and if you do, it works out to pennies per hour. And the data is notoriously difficult to analyze, as many responses do not contain authentic responses. Working with a global market research group, we developed a concept for a new approach. Our designs designs aim to **Hook**, **Direct**, **Enable**, and **Motivate** the panelists. The experience becomes delightful, simple, clear, and rewarding. \n\n *To accesss the the prototype, please contact me for the password*",
     "client": "A global market research firm",
     "date": "2025",
     "link": {
@@ -211,6 +211,35 @@
         "src": "tiletap-4.jpg",
         "caption": ""        
       }
+    ]    
+  },
+  {
+    "id": "welcome-center",
+    "title": "Welcome Center",
+    "description":"The Boston Public Library’s Welcome Center is the anchor to the renovated Johnson Building. It pulls people in from the street and sends them on a delightful journey of discovery throughout the library. Its unique nautilus shape is built in three sections and consists of ten large curved screens and twenty-eight unique square displays all in an illuminated, custom fabricated stainless steel housing. \n\n Visitors interact with 6 unique modules, through which they can find out about upcoming programs, see the invisible lives of books, take a 'Shelf-Portrait', learn about their community, explore tweets and library activity, and so much more. Emblazoned with the motto FREE TO ALL, the Welcome Center is a reflection of a dynamic library and the city that built it. \n\n In addition to the Welcome Center itself our team at Small Design Firm developed a content management system that serves all of the parts of the Welcome Center. Library staff use a web-based interface to manage the modules.",
+    "client": "Boston Public Library",
+    "date": "2015",
+    "images": [
+      {
+        "src": "welcome-center-0.jpg",
+        "caption": ""        
+      },{
+        "src": "welcome-center-1.jpg",
+        "caption": "The 'Shelf-Portrait' module draws your portrait with your favorite text. You poses before the built-in camera and select from several famous texts. Our custom code finds your facial contours in the image and then renders the text along those lines. You can then save the photo to share with other guests or download it to your own device."
+      },{
+        "src": "welcome-center-2.jpg",
+        "caption": "The module Pulse visualizes activity in the library system in near real-time. Each event is represented by an icon that delightfully pops across the screen. When taken together, the movement of these points — checkouts and check-ins, fines, acquisitions, website visits, social media posts, programs such as classes held by the library, and more — reveal the amount and patterns of activity in the library at a given time."  
+      },{
+        "src": "welcome-center-3.jpg",
+        "caption": "The Welcome Center includes trivia, announcements, and a module where guests explore data from the city."        
+      },{
+        "src": "welcome-center-4.jpg",
+        "caption": "A major theme of the Welcome Center is community and access."        
+      },{
+        "src": "welcome-center-5.jpg",
+        "caption": "Patrons explore the library's circulating collection."   
+      }
+      
     ]    
   }
 ]

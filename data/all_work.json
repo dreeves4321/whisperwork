@@ -119,6 +119,18 @@
     "client": "Boston Public Library"
   },
   {
+    "id": "welcome-center",
+    "title": "Welcome Center",
+    "description": "Six unique interactive experiences delighted and informed patrons at the newly renovated Boston Public Library Johnson Building.",
+    "type": "gallery",
+    "threads": [
+      "interactive-experiences", "delight"
+    ],
+    "thumbnail": "welcome-center-0.jpg",
+    "date": "2015",
+    "client": "Boston Public Library"
+  },
+  {
     "id": "sama-sama",
     "title": "SamaSama — Conductors",
     "description": "Conductors was an attraction for SamaSama, an interactive audiovisual theme park full of attractions where players interact in groups to create music.",
