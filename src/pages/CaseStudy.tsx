@@ -9,6 +9,7 @@ const CaseStudy: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [caseStudy, setCaseStudy] = useState<CaseStudyType | null>(null);
+  const [modalImage, setModalImage] = useState<{ src: string; alt?: string; caption?: string } | null>(null);
 
   const markdownComponents: Components = {
     a: ({ href, children }) => (
@@ -103,6 +104,8 @@ const CaseStudy: React.FC = () => {
                     src={`${process.env.PUBLIC_URL}/images/${block.src}`}
                     alt={block.alt || ''}
                     className="case-study__image"
+                    onClick={() => setModalImage({ src: `${process.env.PUBLIC_URL}/images/${block.src}`, alt: block.alt, caption: block.text })}
+                    style={{ cursor: 'pointer' }}
                   />
                   {block.text && (
                     <p className="case-study__caption">{block.text}</p>
@@ -135,6 +138,14 @@ const CaseStudy: React.FC = () => {
           }
         })}
       </div>
+      {modalImage && (
+        <div className="case-study__modal" onClick={() => setModalImage(null)}>
+          <div className="case-study__modal-content">
+            <img src={modalImage.src} alt={modalImage.alt || ''} className="case-study__modal-image" />
+            {modalImage.caption && <p className="case-study__modal-caption">{modalImage.caption}</p>}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

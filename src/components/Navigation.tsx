@@ -10,7 +10,7 @@ const Navigation: React.FC = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      if (currentScrollY > lastScrollY) {
+      if (currentScrollY > lastScrollY && currentScrollY >> 0) {
         // Scrolling down
         setIsHidden(true);
       } else {

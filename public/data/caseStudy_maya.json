@@ -13,7 +13,7 @@
 	    },
 	    {
 	        "type": "body",
-	        "text": "**Home health is growing. And it's challenging.** /n/n The home healthcare sector is expected to witness a 20% growth in employment over the next decade, driven by demographic shifts, technological advancements, and a growing emphasis on patient-centric and value-based care. Home health agencies play a pivotal role in delivering medical care directly to homebound patients./n/n Home health agencies face many challenges. Workforce shortages pose a significant hurdle as demand outpaces the availability of skilled healthcare professionals. Navigating regulatory complexities and addressing reimbursement issues require cohesive and adaptable workflows. Additionally, maintaining clear communication among staff and upholding elevated standards of care pose challenges within the decentralized context of home care./n/n Texas-based Maya Healthcare approached GoInvo to design a digital platform that can support and empower agencies through these challenges. They need software that fills a unique spectrum of capabilities: part traditional EHR, part fleet management system, part content management system."
+	        "text": "**Home health is growing. And it's challenging.** \n\n The home healthcare sector is expected to witness a 20% growth in employment over the next decade, driven by demographic shifts, technological advancements, and a growing emphasis on patient-centric and value-based care. Home health agencies play a pivotal role in delivering medical care directly to homebound patients.\n\n Home health agencies face many challenges. Workforce shortages pose a significant hurdle as demand outpaces the availability of skilled healthcare professionals. Navigating regulatory complexities and addressing reimbursement issues require cohesive and adaptable workflows. Additionally, maintaining clear communication among staff and upholding elevated standards of care pose challenges within the decentralized context of home care.\n\n Texas-based Maya Healthcare approached GoInvo to design a digital platform that can support and empower agencies through these challenges. They need software that fills a unique spectrum of capabilities: part traditional EHR, part fleet management system, part content management system."
 	    },
 	    {
 	    	"type": "section",
@@ -21,7 +21,7 @@
 	    },
 	    {
 	    	"type": "body",
-	    	"text": "**Nurses need to drive the process and care.** /n/n We engaged the Maya Healthcare team, both back-office staff and field staff, to outline the challenges and needs in managing home healthcare. We dug deep into their processes and workflows, learning about patient intake, daily huddles, scheduling, on-site visits, routines, and patient census. /n/n Nurses, as the primary caretakers and advocates for patients, should be at the forefront of designing and directing electronic medical records systems. Their integral role and firsthand experience in patient care make them uniquely qualified to influence the development of the Maya EHR, ensuring this service is tailored to best support and enhance patient care."
+	    	"text": "**Nurses need to drive the process and care.** \n\n We engaged the Maya Healthcare team, both back-office staff and field staff, to outline the challenges and needs in managing home healthcare. We dug deep into their processes and workflows, learning about patient intake, daily huddles, scheduling, on-site visits, routines, and patient census. \n\n Nurses, as the primary caretakers and advocates for patients, should be at the forefront of designing and directing electronic medical records systems. Their integral role and firsthand experience in patient care make them uniquely qualified to influence the development of the Maya EHR, ensuring this service is tailored to best support and enhance patient care."
 	    },
 	    {
 	    	"type": "image",
@@ -30,7 +30,7 @@
 	    },
 	    {
 	    	"type": "body",
-	    	"text": "**Nail scheduling and intake first.** /n/n With half-baked patient information, care and reimbursement fall flat. If you can’t schedule 50 nurses and 1,000 patient visits, the clinic collapses. Start with the basics and make the workflow work beautifully. /n/n **Balance the ideal against the shoestring budget.** /n/n New ideas are great. Explore, develop, test, iterate. But the realities of shipping software on a budget and timeline require choosing the ideas that get the most impact for your effort."
+	    	"text": "**Nail scheduling and intake first.** \n\n With half-baked patient information, care and reimbursement fall flat. If you can’t schedule 50 nurses and 1,000 patient visits, the clinic collapses. Start with the basics and make the workflow work beautifully. \n\n **Balance the ideal against the shoestring budget.** \n\n New ideas are great. Explore, develop, test, iterate. But the realities of shipping software on a budget and timeline require choosing the ideas that get the most impact for your effort."
 
 	    },
 	    {
@@ -39,7 +39,7 @@
 	    },
 	    {
 	    	"type": "body",
-	    	"text": "**End-to-end workflow designed** \n\n  Designing the patient intake and scheduling was the first step. Full-service EHRs need all the services including patient intake, scheduling, daily huddles, care plans, billing, data and care regulatory rules, etc. These services need to be available on mobile devices since care (and the data collection) happens mostly in the home. \n\n **Scheduling is a 24/7 challenge.** \n\n The staff only get paid when schedules comply with regulations, and sometimes there are very small windows to fit appointments in. To keep the tight ship running, the business thriving, and to ensure patients receive the care they need, the digital tools must provide: /n/n  - Smooth handoffs and communication. \n - Clear visibility of which patients need appointments scheduled next, and what is required for those appointments. \n - Clear overview of clinical staff credentials, location, and availability."
+	    	"text": "**End-to-end workflow designed** \n\n  Designing the patient intake and scheduling was the first step. Full-service EHRs need all the services including patient intake, scheduling, daily huddles, care plans, billing, data and care regulatory rules, etc. These services need to be available on mobile devices since care (and the data collection) happens mostly in the home. \n\n **Scheduling is a 24/7 challenge.** \n\n The staff only get paid when schedules comply with regulations, and sometimes there are very small windows to fit appointments in. To keep the tight ship running, the business thriving, and to ensure patients receive the care they need, the digital tools must provide: \n\n  - Smooth handoffs and communication. \n - Clear visibility of which patients need appointments scheduled next, and what is required for those appointments. \n - Clear overview of clinical staff credentials, location, and availability."
 	    },
 	    {
 	    	"type": "image",

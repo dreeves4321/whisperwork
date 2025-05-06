@@ -41,7 +41,7 @@ const About: React.FC = () => {
                 <p><a href={`mailto:${personal.contacts.email}`}>{personal.contacts.email}</a></p>
                 <p>{personal.contacts.phone}</p>
                 <p><a href={personal.contacts.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-                <p><a href={personal.contacts.github} target="_blank" rel="noopener noreferrer">GitHub</a></p>                 
+                <p><a href={personal.contacts.resume} target="_blank" rel="noopener noreferrer">Resume</a></p>                 
               </div>
             </section>          
           </div>

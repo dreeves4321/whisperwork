@@ -96,7 +96,7 @@ export interface Personal {
     email: string;
     phone: string;
     linkedin: string;
-    github: string;
+    resume: string;
   };
   "secondary contact": {
     text: string;

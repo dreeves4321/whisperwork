@@ -57,6 +57,10 @@ body.modal-open {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+
+    @include for-size-and-smaller($small-tablet) {
+      margin: 0 $spacing-unit-1;
+    }
   }
 
   &__content {
@@ -144,7 +148,7 @@ body.modal-open {
     position: relative;
 
     @include for-size-and-smaller($small-tablet) {
-      aspect-ratio: 1.5;
+      //aspect-ratio: 1.5;
     }
   }
 

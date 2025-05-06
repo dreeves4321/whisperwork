@@ -100,4 +100,49 @@
         font-size: $font-size-small;
         color: $text-color-light;
     }
+
+    &__modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: $surface-color-shader;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    &__modal-content {
+        background: none;
+        border-radius: 8px;
+        max-width: 90vw;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+        cursor: auto;
+    }
+
+    &__modal-image {
+        max-width: 100%;        
+        border-radius: 4px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+        background: #fff;
+    }
+      
+    &__modal-caption {
+        margin-top: 1rem;
+        color: #fff;
+        font-size: 1.1rem;
+        text-align: center;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
 }
+
+
+
+
