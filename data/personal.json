@@ -1,65 +1,23 @@
 {
     "name": "Daniel Reeves",
-    "descriptors": ["Designer", "Maker", "Engineer"],
+    "descriptors": ["Designer", "Systems Thinker", "Builder"],
     "headshot": "images/about/headshot.jpg",    
     "contacts": {
         "email": "dan@dfrdesign.com",
         "phone": "617.894.3265",
-        "github": "https://github.com/dreeves4321",
-        "linkedin": "https://www.linkedin.com/in/danielfreeves"
+        "linkedin": "https://www.linkedin.com/in/danielfreeves",
+        "resume": "https://drive.google.com/file/d/1uMC-W5vMm9pj6NQboNhDfuzF-4RaMT_X/view?usp=sharing"
     },
     "secondary contact":
     {
         "text": "LinkedIn",
         "url": "https://www.linkedin.com/in/danielfreeves"
     },
-    "bio": "Hello! I'm Daniel Reeves, and I'm a product designer, previously developer, previously scientist. I'm a Boston area native, and I'm currently looking for a position in user experience or product design.",
-    "images": [
-        {
-            "src": "images/about/side1.jpeg",
-            "alt": "Side view of a wooden cabinet showing its construction details",
-            "caption": "Handcrafted cabinet with dovetail joints and custom hardware"
-        },
-        {
-            "src": "images/about/side2.jpeg",
-            "alt": "Another angle of the wooden cabinet showing its finish",
-            "caption": "Natural wood finish highlighting the grain pattern"
-        },
-        {
-            "src": "images/about/table.jpeg",
-            "alt": "Custom built wooden table with unique design",
-            "caption": "Dining table with integrated storage and modern design"
-        },
-        {
-            "src": "images/about/trunk.jpeg",
-            "alt": "Vintage style wooden trunk with metal hardware",
-            "caption": "Restored antique trunk with custom interior"
-        },
-        {
-            "src": "images/about/rack1.jpeg",
-            "alt": "Wall-mounted wooden rack for storage",
-            "caption": "Custom wall rack with adjustable shelves"
-        },
-        {
-            "src": "images/about/boards.jpeg",
-            "alt": "Collection of wooden cutting boards",
-            "caption": "Handmade cutting boards with various wood types"
-        },
-        {
-            "src": "images/about/rack2.jpeg",
-            "alt": "Another view of the wall-mounted storage rack",
-            "caption": "Storage rack with integrated lighting"
-        },
-        {
-            "src": "images/about/lego.jpeg",
-            "alt": "Lego model of a complex structure",
-            "caption": "Custom Lego model showcasing design skills"
-        }
-    ],
+    "bio": "Hello! I'm Daniel Reeves, a Boston-based product designer with over a decade experience. My road has been a bit unique, starting with a PhD in physics and including a stint designing and building delightful interactive multimedia installations. My passion for aesthetics and human-centricity informs both my design work and my hobbies. I'm currently looking for my next challenge in product design!",
     "as a sections":[
         {
             "title": "Designer",
-            "text": "I'm a product designer for software teams. I excel at bringing a structured and analytical approach, honed through my Ph.D. training, to bear on complex problems to find intuitive solutions and communicate them clearly to diverse audiences. I listen, think, and always advocate for the user."
+            "text": "I'm a product and program designer for all sorts of cross-functional teams. I excel at bringing a structured and analytical approach, honed through my Ph.D. training, to bear on complex problems to find intuitive solutions and communicate them clearly to diverse audiences. I listen, think, and always advocate for the user."
         },
         {
             "title": "Scientist",
@@ -67,7 +25,7 @@
         },
         {
             "title": "Hobbyist",
-            "text": "I enjoy playign with my cat, woodworking, and, gardening. I like coaxing beautiful shapes and textures from the raw natural materials of wood and soil.",
+            "text": "I enjoy woodworking, gardening, and playing with my cat. I like coaxing beautiful shapes and textures from the raw natural materials of wood and soil.",
             "images":[
                 {
                     "src": "images/about/side1.jpeg",
