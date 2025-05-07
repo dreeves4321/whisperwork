@@ -72,6 +72,14 @@
         }
     }
 
+    &__quote-block {
+        font-size: $font-size-large;
+        font-weight: $font-weight-normal;        
+        font-style: italic;
+        margin: $spacing-unit-2 $spacing-unit-2 $spacing-unit-2 $spacing-unit-2;
+        line-height: 130%;
+    }
+
     &__image-block {
         margin-bottom: $spacing-unit-2;
         display: flex;

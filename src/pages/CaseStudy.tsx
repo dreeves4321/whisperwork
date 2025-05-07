@@ -100,23 +100,33 @@ const CaseStudy: React.FC = () => {
             case 'image':
               return (
                 <section key={index} className="case-study__image-block">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/images/${block.src}`}
-                    alt={block.alt || ''}
-                    className="case-study__image"
-                    onClick={() => setModalImage({ src: `${process.env.PUBLIC_URL}/images/${block.src}`, alt: block.alt, caption: block.text })}
-                    style={{ cursor: 'pointer' }}
-                  />
+                  {block.url ? (
+                    <a href={block.url} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/${block.src}`}
+                        alt={block.alt || ''}
+                        className="case-study__image"
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={`${process.env.PUBLIC_URL}/images/${block.src}`}
+                      alt={block.alt || ''}
+                      className="case-study__image"
+                      onClick={() => setModalImage({ src: `${process.env.PUBLIC_URL}/images/${block.src}`, alt: block.alt, caption: block.text })}
+                      style={{ cursor: 'pointer' }}
+                    />
+                  )}
                   {block.text && (
-                    <p className="case-study__caption">{block.text}</p>
+                    <div className="case-study__caption"><ReactMarkdown>{block.text}</ReactMarkdown></div>
                   )}
                 </section>
               );
             case 'quote':
               return (
-                <blockquote key={index} className="case-study__quote-block">
+                <p key={index} className="case-study__quote-block">
                   {block.text}
-                </blockquote>
+                </p>
               );
             case 'button':
               return (

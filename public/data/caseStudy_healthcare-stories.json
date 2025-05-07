@@ -24,7 +24,7 @@
     {
       "type": "image",
       "src": "healthcare-stories-2.jpg",
-      "text": "Using global, national, and local data sources, we crafted key questions and US Healthcare storylines"
+      "text": "Using global, national, and local data sources, we crafted key questions and US Healthcare storylines."
     },
     {
       "type": "section",
@@ -54,7 +54,7 @@
     },
     {
       "type": "body",
-      "text": "We delivered an open source US Healthcare Dashboard experience for all government agencies and companiees to use, update, and evolve. Watch a video of the software in action below. The software is accompanied by an analysis of metrics necessary to measure population health, and compiled a comprehensive repository of current health indicators. It's [now available online](https://docs.google.com/spreadsheets/d/1eef_1BK6gipOuhxpdXWnQ8eQdp1ZssjwUupKs7oITdc/edit?usp=sharing) for anyone across the planet to use as a resource."
+      "text": "We delivered an open source US Healthcare Dashboard experience for all government agencies and companies to use, update, and evolve. Watch a video of the software in action below. The software is accompanied by an analysis of metrics necessary to measure population health, and compiled a comprehensive repository of current health indicators. It's [now available online](https://docs.google.com/spreadsheets/d/1eef_1BK6gipOuhxpdXWnQ8eQdp1ZssjwUupKs7oITdc/edit?usp=sharing) for anyone across the planet to use as a resource."
     },
     {
       "type": "video",

@@ -60,6 +60,7 @@ interface ImageContentBlock extends BaseContentBlock {
   text: string; // caption
   src: string;  // required for images
   alt?: string;
+  url: string; // makes the image into a link
 }
 
 interface QuoteContentBlock extends BaseContentBlock {
