@@ -6,12 +6,14 @@
     <script type="text/javascript">
       // Redirect all requests to index.html for React Router
       (function() {
-        var l = window.location;
-        var pathname = l.pathname.replace(/^\//, '');
-        var hash = l.hash || '';
-        var search = l.search || '';
-        var redirectUrl = '/' + (pathname ? pathname : '') + search + hash;
-        window.location.replace(window.location.origin + redirectUrl);
+        sessionStorage.setItem('redirected', '1'); // Prevent infinite loop
+        const path = location.pathname.substring(1);
+        if (path && sessionStorage.getItem('redirected') !== '2') {
+          history.replaceState({}, document.title, location.pathname);
+          location.replace(location.protocol + '//' + location.host + '?redirect=' + path);
+        } else {
+          sessionStorage.setItem('redirected', '2');
+        }
       })();
     </script>
     <title>404 Not Found</title>
