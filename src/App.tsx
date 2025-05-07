@@ -6,12 +6,14 @@ import About from './pages/About';
 import CaseStudy from './pages/CaseStudy';
 import { usePersonalData } from './hooks/usePersonalData';
 import './styles/main.scss';
+import RedirectHandler from './RedirectHandler';
 
 const App: React.FC = () => {
   const { personal } = usePersonalData();
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      <RedirectHandler />
       <div className="app">
         <Navigation />
         <main className="main">
