@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script type="text/javascript">
+      // Redirect all requests to index.html for React Router
+      (function() {
+        var l = window.location;
+        var pathname = l.pathname.replace(/^\//, '');
+        var hash = l.hash || '';
+        var search = l.search || '';
+        var redirectUrl = '/' + (pathname ? pathname : '') + search + hash;
+        window.location.replace(window.location.origin + redirectUrl);
+      })();
+    </script>
+    <title>404 Not Found</title>
+    <style>
+      body { font-family: sans-serif; text-align: center; margin-top: 10vh; color: #444; }
+    </style>
+  </head>
+  <body>
+    <h1>404 - Page Not Found</h1>
+    <p>Redirecting you to the site...</p>
+    <p>If you are not redirected, <a href="/">click here</a>.</p>
+  </body>
+</html> 
